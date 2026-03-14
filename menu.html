@@ -1,238 +1,839 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Annie's Nails & Spa | Service Menu</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+  <title>Luxury Price Menu | Annie's Nails & Spa Odessa TX</title>
+  <meta name="description" content="Luxury price menu for Annie's Nails & Spa in Odessa, Texas. Manicure, pedicure, acrylic, dip powder, waxing, and more.">
+  <meta name="theme-color" content="#241a17" />
 
-<style>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-body{
-margin:0;
-font-family:Arial,Helvetica,sans-serif;
-background:#fff8f5;
-color:#222;
-}
+  <style>
+    :root{
+      --bg:#fdf7f3;
+      --bg-soft:#f7ede8;
+      --card:rgba(255,255,255,.96);
+      --text:#241a17;
+      --muted:#806f68;
+      --line:#ead9d1;
+      --gold:#c79a6a;
+      --gold-dark:#a97847;
+      --rose:#f4e5dd;
+      --dark:#2c201c;
+      --shadow:0 14px 35px rgba(39,25,20,.08);
+      --shadow-lg:0 24px 55px rgba(39,25,20,.14);
+      --radius:26px;
+      --radius-sm:18px;
+      --max:960px;
+    }
 
-.container{
-max-width:560px;
-margin:auto;
-padding:20px;
-}
+    *{
+      box-sizing:border-box;
+      -webkit-tap-highlight-color:transparent;
+    }
 
-.card{
-background:white;
-border-radius:24px;
-box-shadow:0 10px 30px rgba(0,0,0,0.08);
-overflow:hidden;
-}
+    html{
+      scroll-behavior:smooth;
+    }
 
-.hero{
-height:230px;
-background:
-linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)),
-url("https://images.unsplash.com/photo-1610992015732-2449b76344bc?auto=format&fit=crop&w=1200&q=80");
-background-size:cover;
-background-position:center;
-position:relative;
-}
+    body{
+      margin:0;
+      font-family:Arial, Helvetica, sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(circle at top, #fffdfb 0%, #fdf7f3 32%, #f8eee9 100%);
+    }
 
-.badge{
-position:absolute;
-bottom:16px;
-left:16px;
-background:white;
-padding:8px 14px;
-border-radius:20px;
-font-size:12px;
-font-weight:700;
-}
+    a{
+      text-decoration:none;
+      color:inherit;
+    }
 
-.content{
-padding:22px;
-text-align:center;
-}
+    img{
+      display:block;
+      max-width:100%;
+    }
 
-h1{
-margin:0;
-font-size:28px;
-}
+    .container{
+      max-width:var(--max);
+      margin:auto;
+      padding:18px 16px 115px;
+    }
 
-.section{
-margin-top:26px;
-text-align:left;
-}
+    .card{
+      background:var(--card);
+      border:1px solid rgba(234,217,209,.95);
+      border-radius:var(--radius);
+      padding:22px;
+      margin-bottom:18px;
+      box-shadow:var(--shadow);
+      backdrop-filter:blur(8px);
+    }
 
-.section h2{
-margin-bottom:10px;
-font-size:20px;
-}
+    .hero{
+      overflow:hidden;
+      position:relative;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,.97), rgba(255,248,244,.97));
+    }
 
-.item{
-display:flex;
-justify-content:space-between;
-padding:10px 0;
-border-bottom:1px solid #eee;
-font-size:15px;
-}
+    .hero::before{
+      content:"";
+      position:absolute;
+      top:-120px;
+      right:-80px;
+      width:260px;
+      height:260px;
+      border-radius:50%;
+      background:radial-gradient(circle, rgba(199,154,106,.16) 0%, rgba(199,154,106,0) 72%);
+      pointer-events:none;
+    }
 
-.buttons{
-margin-top:25px;
-display:grid;
-gap:12px;
-}
+    .hero-top{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:14px;
+      margin-bottom:16px;
+      position:relative;
+      z-index:2;
+    }
 
-.btn{
-display:flex;
-justify-content:center;
-align-items:center;
-height:56px;
-border-radius:16px;
-font-weight:700;
-text-decoration:none;
-}
+    .hero-left{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      min-width:0;
+    }
 
-.book{
-background:#c88b76;
-color:white;
-}
+    .back-btn{
+      width:46px;
+      height:46px;
+      border-radius:15px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background:linear-gradient(180deg, #fffefe, #f8efea);
+      border:1px solid #e8d5cb;
+      color:#4d3730;
+      box-shadow:inset 0 1px 0 rgba(255,255,255,.85);
+      font-size:18px;
+      flex-shrink:0;
+    }
 
-.home{
-border:1px solid #ddd;
-background:white;
-}
+    .hero-kicker{
+      display:inline-block;
+      font-size:12px;
+      font-weight:800;
+      letter-spacing:.13em;
+      text-transform:uppercase;
+      color:#9a755c;
+      margin-bottom:5px;
+    }
 
-.footer{
-text-align:center;
-font-size:13px;
-color:#777;
-margin-top:20px;
-}
+    h1{
+      margin:0;
+      font-size:33px;
+      line-height:1.08;
+      letter-spacing:.01em;
+    }
 
-</style>
+    .top-book{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-height:48px;
+      padding:12px 18px;
+      border-radius:16px;
+      background:linear-gradient(135deg, var(--gold), var(--gold-dark));
+      color:#fff;
+      font-size:14px;
+      font-weight:800;
+      box-shadow:0 14px 28px rgba(169,120,71,.28);
+      white-space:nowrap;
+    }
+
+    .subtitle{
+      color:var(--muted);
+      font-size:14px;
+      line-height:1.65;
+      margin-top:6px;
+      position:relative;
+      z-index:2;
+    }
+
+    .hero-grid{
+      display:grid;
+      grid-template-columns:1.15fr .85fr;
+      gap:16px;
+      margin-top:18px;
+      position:relative;
+      z-index:2;
+    }
+
+    .hero-panel{
+      border-radius:24px;
+      padding:20px;
+      background:
+        linear-gradient(135deg, rgba(199,154,106,.18), rgba(169,120,71,.08)),
+        linear-gradient(180deg, #fffdfa, #fbf1eb);
+      border:1px solid #ecd9cf;
+      box-shadow:var(--shadow-lg);
+    }
+
+    .hero-panel strong{
+      display:block;
+      font-size:24px;
+      line-height:1.15;
+      margin-bottom:10px;
+      color:#2b201d;
+    }
+
+    .hero-panel p{
+      margin:0;
+      font-size:14px;
+      line-height:1.6;
+      color:var(--muted);
+      max-width:520px;
+    }
+
+    .hero-tags{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top:16px;
+    }
+
+    .hero-tag{
+      padding:9px 14px;
+      border-radius:999px;
+      font-size:12px;
+      font-weight:800;
+      letter-spacing:.04em;
+      text-transform:uppercase;
+      color:#755547;
+      background:linear-gradient(180deg, #fffdfc, #f9eee8);
+      border:1px solid #ecd9cf;
+      box-shadow:0 8px 18px rgba(0,0,0,.05);
+    }
+
+    .hero-side{
+      border-radius:24px;
+      padding:20px;
+      background:linear-gradient(180deg, #fffefc, #faf1eb);
+      border:1px solid #eddcd3;
+      box-shadow:0 12px 26px rgba(0,0,0,.06);
+    }
+
+    .hero-side-title{
+      font-size:15px;
+      font-weight:800;
+      color:#624739;
+      margin-bottom:12px;
+      letter-spacing:.02em;
+    }
+
+    .quick-list{
+      display:grid;
+      gap:10px;
+    }
+
+    .quick-item{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:10px;
+      padding:12px 0;
+      border-bottom:1px solid #eee3dd;
+      font-size:14px;
+    }
+
+    .quick-item:last-child{
+      border-bottom:none;
+    }
+
+    .quick-item strong{
+      font-size:14px;
+      color:#302420;
+    }
+
+    .quick-price{
+      font-weight:800;
+      color:#9a6a4d;
+      white-space:nowrap;
+    }
+
+    .jump-grid{
+      display:grid;
+      grid-template-columns:repeat(4, 1fr);
+      gap:10px;
+      margin-top:18px;
+    }
+
+    .jump-btn{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      min-height:50px;
+      padding:12px 14px;
+      border-radius:16px;
+      background:linear-gradient(180deg, #fffefe, #f8efea);
+      color:#4d3730;
+      border:1px solid #e8d5cb;
+      font-size:13px;
+      font-weight:800;
+      text-align:center;
+      box-shadow:inset 0 1px 0 rgba(255,255,255,.85);
+    }
+
+    .section-header{
+      display:flex;
+      justify-content:space-between;
+      align-items:end;
+      gap:14px;
+      margin-bottom:14px;
+    }
+
+    .section-title{
+      margin:0;
+      font-size:26px;
+      letter-spacing:.01em;
+    }
+
+    .section-note{
+      margin:0;
+      font-size:14px;
+      color:var(--muted);
+      line-height:1.55;
+      max-width:600px;
+    }
+
+    .menu-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:16px;
+    }
+
+    .menu-group{
+      border-radius:24px;
+      overflow:hidden;
+      border:1px solid #efe0d8;
+      background:linear-gradient(180deg, #fffdfa, #fbf3ee);
+      box-shadow:0 10px 24px rgba(0,0,0,.05);
+    }
+
+    .group-head{
+      padding:15px 18px;
+      background:linear-gradient(135deg, rgba(199,154,106,.18), rgba(169,120,71,.08));
+      border-bottom:1px solid #ecd9cf;
+      font-size:16px;
+      font-weight:800;
+      color:#624739;
+      letter-spacing:.02em;
+    }
+
+    .service{
+      display:flex;
+      justify-content:space-between;
+      align-items:flex-start;
+      gap:14px;
+      padding:15px 18px;
+      border-bottom:1px solid #eee3dd;
+    }
+
+    .service:last-child{
+      border-bottom:none;
+    }
+
+    .service-left strong{
+      display:block;
+      font-size:15px;
+      color:#302420;
+      margin-bottom:4px;
+    }
+
+    .service-left span{
+      display:block;
+      font-size:13px;
+      line-height:1.45;
+      color:var(--muted);
+    }
+
+    .price{
+      white-space:nowrap;
+      font-size:15px;
+      font-weight:800;
+      color:#9a6a4d;
+      padding-left:8px;
+    }
+
+    .sub-list{
+      padding:0 18px 16px 30px;
+      margin:0;
+      color:var(--muted);
+      font-size:13px;
+      line-height:1.6;
+    }
+
+    .sub-list li{
+      margin:2px 0;
+    }
+
+    .single-col{
+      max-width:720px;
+    }
+
+    .note-box{
+      border-radius:22px;
+      padding:18px;
+      background:linear-gradient(180deg, #fffdfb, #f8efea);
+      border:1px solid #ead9d1;
+      color:var(--muted);
+      font-size:14px;
+      line-height:1.7;
+    }
+
+    .footer{
+      text-align:center;
+      font-size:13px;
+      color:#8b7a72;
+      line-height:1.7;
+      margin-top:18px;
+      padding-bottom:4px;
+    }
+
+    .sticky-book{
+      position:fixed;
+      left:12px;
+      right:12px;
+      bottom:12px;
+      z-index:50;
+    }
+
+    .sticky-book a{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      min-height:60px;
+      border-radius:20px;
+      color:#fff;
+      background:linear-gradient(135deg, var(--gold), var(--gold-dark));
+      box-shadow:0 18px 34px rgba(169,120,71,.32);
+      letter-spacing:.06em;
+      font-weight:900;
+      text-transform:uppercase;
+    }
+
+    @media (max-width:860px){
+      .hero-grid,
+      .menu-grid{
+        grid-template-columns:1fr;
+      }
+
+      .jump-grid{
+        grid-template-columns:1fr 1fr;
+      }
+    }
+
+    @media (max-width:520px){
+      .container{
+        padding:14px 14px 110px;
+      }
+
+      .card{
+        padding:18px;
+      }
+
+      .hero-top{
+        flex-direction:column;
+        align-items:flex-start;
+      }
+
+      h1{
+        font-size:28px;
+      }
+
+      .hero-panel strong{
+        font-size:22px;
+      }
+
+      .section-title{
+        font-size:22px;
+      }
+
+      .jump-grid{
+        grid-template-columns:1fr 1fr;
+      }
+
+      .service{
+        gap:10px;
+      }
+
+      .service-left strong{
+        font-size:14px;
+      }
+
+      .service-left span{
+        font-size:12px;
+      }
+
+      .price{
+        font-size:14px;
+      }
+    }
+  </style>
 </head>
-
 <body>
 
-<div class="container">
+  <div class="container">
 
-<div class="card">
+    <div class="card hero">
+      <div class="hero-top">
+        <div class="hero-left">
+          <a class="back-btn" href="index.html" aria-label="Back to homepage">
+            <i class="fa-solid fa-arrow-left"></i>
+          </a>
 
-<div class="hero">
-<div class="badge">Service Menu</div>
-</div>
+          <div>
+            <span class="hero-kicker">Annie's Nails & Spa</span>
+            <h1>Luxury Price Menu</h1>
+          </div>
+        </div>
 
-<div class="content">
+        <a class="top-book"
+          href="https://www.lldtek.org/salon/appt/NDc1NjJ8YW5uaWU5ODB8VFhfMDc5ODB8ZmFiOTdiNzJlZDQ4Y2YzZjY2NTZlZDQ2ZjM2ZGVjYTQ="
+          target="_blank" rel="noopener noreferrer">
+          Book Appointment
+        </a>
+      </div>
 
-<h1>Our Nail Services</h1>
+      <div class="subtitle">
+        2613 N Grandview Ave<br>
+        Odessa, TX 79761
+      </div>
 
-<div class="section">
+      <div class="hero-grid">
+        <div class="hero-panel">
+          <strong>Simple pricing. Beautiful results.</strong>
+          <p>
+            Explore our salon services below. Final pricing may vary depending on nail length,
+            shape, design, repair work, and specialty add-ons.
+          </p>
 
-<h2>Manicure</h2>
+          <div class="hero-tags">
+            <div class="hero-tag">Award-Winning</div>
+            <div class="hero-tag">Friendly Team</div>
+            <div class="hero-tag">Odessa TX</div>
+          </div>
+        </div>
 
-<div class="item">
-<span>Gel Color Manicure</span>
-<span>$35</span>
-</div>
+        <div class="hero-side">
+          <div class="hero-side-title">Most Popular Services</div>
 
-<div class="item">
-<span>Gel French Manicure</span>
-<span>$40</span>
-</div>
+          <div class="quick-list">
+            <div class="quick-item">
+              <strong>Gel Manicure</strong>
+              <span class="quick-price">$35</span>
+            </div>
+            <div class="quick-item">
+              <strong>Basic Pedicure</strong>
+              <span class="quick-price">$30</span>
+            </div>
+            <div class="quick-item">
+              <strong>Dip Color</strong>
+              <span class="quick-price">$40+</span>
+            </div>
+            <div class="quick-item">
+              <strong>Luxury Pedicure</strong>
+              <span class="quick-price">$50</span>
+            </div>
+          </div>
+        </div>
+      </div>
 
-<div class="item">
-<span>Dip Powder</span>
-<span>$40+</span>
-</div>
+      <div class="jump-grid">
+        <a class="jump-btn" href="#nail-spa">Nail Services</a>
+        <a class="jump-btn" href="#pedicure">Pedicure</a>
+        <a class="jump-btn" href="#waxing">Waxing</a>
+        <a class="jump-btn" href="index.html">Back Home</a>
+      </div>
+    </div>
 
-<div class="item">
-<span>Dip French</span>
-<span>$45+</span>
-</div>
+    <div class="card" id="nail-spa">
+      <div class="section-header">
+        <div>
+          <h2 class="section-title">Nail Spa Services</h2>
+          <p class="section-note">Classic manicure, dip powder, acrylic services, and enhancement options.</p>
+        </div>
+      </div>
 
-<div class="item">
-<span>Full Set Shellac</span>
-<span>$50+</span>
-</div>
+      <div class="menu-grid">
+        <div class="menu-group">
+          <div class="group-head">Natural Nails & Gel</div>
 
-</div>
+          <div class="service">
+            <div class="service-left">
+              <strong>Gel Color Manicure</strong>
+            </div>
+            <div class="price">$35</div>
+          </div>
 
-<div class="section">
+          <div class="service">
+            <div class="service-left">
+              <strong>Gel French Manicure</strong>
+            </div>
+            <div class="price">$40</div>
+          </div>
 
-<h2>Pedicure</h2>
+          <div class="service">
+            <div class="service-left">
+              <strong>Gel Color / French Only</strong>
+            </div>
+            <div class="price">$20 / $25</div>
+          </div>
 
-<div class="item">
-<span>Basic Pedicure</span>
-<span>$30</span>
-</div>
+          <div class="service">
+            <div class="service-left">
+              <strong>Gel Remove w/ Service</strong>
+            </div>
+            <div class="price">$10</div>
+          </div>
 
-<div class="item">
-<span>Deluxe Pedicure</span>
-<span>$40</span>
-</div>
+          <div class="service">
+            <div class="service-left">
+              <strong>Dip Color</strong>
+            </div>
+            <div class="price">$40+</div>
+          </div>
 
-<div class="item">
-<span>Luxury Pedicure</span>
-<span>$50</span>
-</div>
+          <div class="service">
+            <div class="service-left">
+              <strong>Dip French</strong>
+            </div>
+            <div class="price">$45+</div>
+          </div>
+        </div>
 
-<div class="item">
-<span>Heavenly Spa Pedicure</span>
-<span>$70</span>
-</div>
+        <div class="menu-group">
+          <div class="group-head">Full Set & Acrylic</div>
 
-<div class="item">
-<span>Ultimate Deluxe Pedicure</span>
-<span>$80</span>
-</div>
+          <div class="service">
+            <div class="service-left">
+              <strong>Full Set Shellac</strong>
+            </div>
+            <div class="price">$50+</div>
+          </div>
 
-</div>
+          <div class="service">
+            <div class="service-left">
+              <strong>White Tip</strong>
+            </div>
+            <div class="price">$45+</div>
+          </div>
 
-<div class="section">
+          <div class="service">
+            <div class="service-left">
+              <strong>Pink & White</strong>
+            </div>
+            <div class="price">$55+</div>
+          </div>
 
-<h2>Waxing</h2>
+          <div class="service">
+            <div class="service-left">
+              <strong>Full Set Toes</strong>
+            </div>
+            <div class="price">$55</div>
+          </div>
 
-<div class="item">
-<span>Eyebrow</span>
-<span>$10</span>
-</div>
+          <div class="service">
+            <div class="service-left">
+              <strong>Acrylic Toes</strong>
+            </div>
+            <div class="price">$50</div>
+          </div>
 
-<div class="item">
-<span>Lip</span>
-<span>$5</span>
-</div>
+          <div class="service">
+            <div class="service-left">
+              <strong>Acrylic Remove Only</strong>
+            </div>
+            <div class="price">$10</div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-<div class="item">
-<span>Full Face</span>
-<span>$35</span>
-</div>
+    <div class="card" id="pedicure">
+      <div class="section-header">
+        <div>
+          <h2 class="section-title">Pedicure</h2>
+          <p class="section-note">
+            Relax in our massage chairs and enjoy pampering care. Service includes nail shaping,
+            cuticle trimming, lotion massage, and regular polish of your choice.
+          </p>
+        </div>
+      </div>
 
-</div>
+      <div class="menu-grid">
+        <div class="menu-group">
+          <div class="group-head">Classic & Deluxe</div>
 
-<div class="buttons">
+          <div class="service">
+            <div class="service-left">
+              <strong>Basic Pedicure</strong>
+            </div>
+            <div class="price">$30</div>
+          </div>
+          <ul class="sub-list">
+            <li>French Polish Add-On: $5</li>
+            <li>Shellac Gel Add-On: $20</li>
+            <li>French Shellac Add-On: $25</li>
+          </ul>
 
-<a class="btn book"
-href="https://www.lldtek.org/salon/appt/NDc1NjJ8YW5uaWU5ODB8VFhfMDc5ODB8ZmFiOTdiNzJlZDQ4Y2YzZjY2NTZlZDQ2ZjM2ZGVjYTQ="
-target="_blank">
-Book Appointment
-</a>
+          <div class="service">
+            <div class="service-left">
+              <strong>Deluxe Pedicure (3 Kind)</strong>
+            </div>
+            <div class="price">$40</div>
+          </div>
+          <ul class="sub-list">
+            <li>Lavender</li>
+            <li>Chocolate</li>
+            <li>Sweet Treat</li>
+          </ul>
 
-<a class="btn home"
-href="index.html">
-Back Home
-</a>
+          <div class="service">
+            <div class="service-left">
+              <strong>Luxury Pedicure (4 Kind)</strong>
+            </div>
+            <div class="price">$50</div>
+          </div>
+          <ul class="sub-list">
+            <li>Milk & Honey</li>
+            <li>Lemon Drop</li>
+            <li>Margarita</li>
+            <li>Cappuccino Espresso</li>
+          </ul>
 
-</div>
+          <div class="service">
+            <div class="service-left">
+              <strong>Jelly Feet Spa</strong>
+            </div>
+            <div class="price">$50</div>
+          </div>
+        </div>
 
-</div>
+        <div class="menu-group">
+          <div class="group-head">Premium Pedicure</div>
 
-</div>
+          <div class="service">
+            <div class="service-left">
+              <strong>Supper Luxury Pedicure (2 Kind)</strong>
+            </div>
+            <div class="price">$60</div>
+          </div>
+          <ul class="sub-list">
+            <li>Green Tea</li>
+            <li>Cucumber</li>
+          </ul>
 
-<div class="footer">
-Annie's Nails & Spa • Odessa Texas
-</div>
+          <div class="service">
+            <div class="service-left">
+              <strong>Heavenly Spa Pedicure (3 Kind)</strong>
+            </div>
+            <div class="price">$70</div>
+          </div>
+          <ul class="sub-list">
+            <li>Tropical Citrus</li>
+            <li>Strawberry</li>
+            <li>Akviera</li>
+          </ul>
 
-</div>
+          <div class="service">
+            <div class="service-left">
+              <strong>Ultimate Deluxe Pedicure (3 Kind)</strong>
+            </div>
+            <div class="price">$80</div>
+          </div>
+          <ul class="sub-list">
+            <li>Champagne Spa</li>
+            <li>Hawaiian</li>
+            <li>Holiday Season</li>
+          </ul>
+
+          <div class="service">
+            <div class="service-left">
+              <strong>Super Signature Annie's Nails Pedicure</strong>
+            </div>
+            <div class="price">$100</div>
+          </div>
+
+          <div class="service">
+            <div class="service-left">
+              <strong>Little Prince & Princess Manicure & Pedicure</strong>
+            </div>
+            <div class="price">$30</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card single-col" id="waxing">
+      <div class="section-header">
+        <div>
+          <h2 class="section-title">Waxing</h2>
+          <p class="section-note">Quick facial waxing services for a clean, polished finish.</p>
+        </div>
+      </div>
+
+      <div class="menu-group">
+        <div class="group-head">Waxing Services</div>
+
+        <div class="service">
+          <div class="service-left">
+            <strong>Lips</strong>
+          </div>
+          <div class="price">$5</div>
+        </div>
+
+        <div class="service">
+          <div class="service-left">
+            <strong>Eyebrow</strong>
+          </div>
+          <div class="price">$10</div>
+        </div>
+
+        <div class="service">
+          <div class="service-left">
+            <strong>Face</strong>
+          </div>
+          <div class="price">$35</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2 class="section-title">Good to Know</h2>
+      <div class="note-box">
+        Prices shown are starting prices. Final pricing may vary based on nail length, shape, custom designs,
+        special requests, repair work, or product removal. Please ask our team for the most accurate quote during
+        your visit or when booking.
+      </div>
+    </div>
+
+    <div class="footer">
+      Annie's Nails &amp; Spa • Odessa, Texas<br>
+      Beautiful nails. Friendly service.
+    </div>
+  </div>
+
+  <div class="sticky-book">
+    <a href="https://www.lldtek.org/salon/appt/NDc1NjJ8YW5uaWU5ODB8VFhfMDc5ODB8ZmFiOTdiNzJlZDQ4Y2YzZjY2NTZlZDQ2ZjM2ZGVjYTQ="
+       target="_blank" rel="noopener noreferrer">
+      Book Now
+    </a>
+  </div>
 
 </body>
 </html>
