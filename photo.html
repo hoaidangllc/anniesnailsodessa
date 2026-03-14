@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
-  <title>Annie's Nails & Spa | Gallery</title>
-  <meta name="description" content="Browse nail designs, salon photos, and beauty inspiration from Annie's Nails & Spa in Odessa, Texas." />
+  <title>Annie's Nails & Spa | Photos</title>
+  <meta name="description" content="View salon photos and nail designs from Annie's Nails & Spa in Odessa, Texas." />
   <meta name="theme-color" content="#111111" />
   <style>
     :root {
@@ -18,10 +18,11 @@
       --accent-dark: #a96955;
       --shadow: 0 14px 36px rgba(0,0,0,.08);
       --radius: 24px;
-      --max: 900px;
+      --max: 520px;
     }
 
     * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+
     body {
       margin: 0;
       font-family: Inter, Arial, Helvetica, sans-serif;
@@ -35,38 +36,42 @@
     .wrap {
       width: min(calc(100% - 24px), var(--max));
       margin: 0 auto;
-      padding: 18px 0 34px;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding: 24px 0;
     }
 
-    .hero {
+    .card {
+      width: 100%;
       background: var(--card);
       border: 1px solid var(--line);
       border-radius: 30px;
       overflow: hidden;
       box-shadow: var(--shadow);
-      margin-bottom: 16px;
     }
 
-    .hero-image {
-      height: 230px;
+    .hero {
+      height: 220px;
       background:
-        linear-gradient(rgba(31,26,24,.18), rgba(31,26,24,.28)),
-        url('https://images.unsplash.com/photo-1632345031435-8727f6897d53?auto=format&fit=crop&w=1400&q=80') center/cover;
+        linear-gradient(rgba(31,26,24,.18), rgba(31,26,24,.26)),
+        url('https://images.unsplash.com/photo-1632345031435-8727f6897d53?auto=format&fit=crop&w=1200&q=80') center/cover;
       position: relative;
     }
 
-    .hero-badge {
+    .badge {
       position: absolute;
       left: 14px;
       bottom: 14px;
+      background: rgba(255,255,255,.92);
+      color: #181615;
       padding: 8px 12px;
       border-radius: 999px;
-      background: rgba(255,255,255,.92);
       font-size: .78rem;
       font-weight: 800;
     }
 
-    .hero-body {
+    .body {
       padding: 24px 18px 22px;
       text-align: center;
     }
@@ -86,157 +91,97 @@
 
     h1 {
       margin: 0;
-      font-size: clamp(2rem, 6vw, 3.4rem);
-      line-height: 1.02;
-      letter-spacing: -.045em;
+      font-size: clamp(1.9rem, 8vw, 2.5rem);
+      line-height: 1.03;
+      letter-spacing: -.04em;
     }
 
-    .hero-body p {
+    p {
       margin: 12px auto 0;
       color: var(--muted);
-      font-size: 1rem;
-      max-width: 46ch;
-    }
-
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 12px;
-      margin-bottom: 16px;
-    }
-
-    .tile {
-      min-height: 180px;
-      border-radius: 22px;
-      border: 1px solid var(--line);
-      overflow: hidden;
-      position: relative;
-      box-shadow: var(--shadow);
-      background-size: cover;
-      background-position: center;
-      transform: translateY(0);
-      transition: transform .22s ease, box-shadow .22s ease;
-    }
-
-    .tile:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 18px 40px rgba(0,0,0,.12);
-    }
-
-    .tile.large {
-      grid-column: 1 / -1;
-      min-height: 300px;
-    }
-
-    .tile.one { background-image: linear-gradient(rgba(0,0,0,.14), rgba(0,0,0,.28)), url('https://images.unsplash.com/photo-1632345031435-8727f6897d53?auto=format&fit=crop&w=1400&q=80'); }
-    .tile.two { background-image: linear-gradient(rgba(0,0,0,.12), rgba(0,0,0,.24)), url('https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=1000&q=80'); }
-    .tile.three { background-image: linear-gradient(rgba(0,0,0,.12), rgba(0,0,0,.24)), url('https://images.unsplash.com/photo-1519014816548-bf5fe059798b?auto=format&fit=crop&w=1000&q=80'); }
-    .tile.four { background-image: linear-gradient(rgba(0,0,0,.12), rgba(0,0,0,.24)), url('https://images.unsplash.com/photo-1522338242992-e1a54906a8da?auto=format&fit=crop&w=1000&q=80'); }
-    .tile.five { background-image: linear-gradient(rgba(0,0,0,.12), rgba(0,0,0,.24)), url('https://images.unsplash.com/photo-1589712235279-947e4d2f84d6?auto=format&fit=crop&w=1000&q=80'); }
-
-    .label {
-      position: absolute;
-      left: 12px;
-      bottom: 12px;
-      padding: 8px 12px;
-      border-radius: 999px;
-      background: rgba(255,255,255,.92);
-      color: var(--text);
-      font-size: .8rem;
-      font-weight: 800;
-    }
-
-    .links-card {
-      background: var(--card);
-      border: 1px solid var(--line);
-      border-radius: 28px;
-      box-shadow: var(--shadow);
-      padding: 18px;
-    }
-
-    .links-card h2 {
-      margin: 0 0 6px;
-      font-size: 1.2rem;
-      letter-spacing: -.02em;
-    }
-
-    .links-card p {
-      margin: 0 0 14px;
-      color: var(--muted);
-      font-size: .94rem;
+      font-size: .96rem;
+      max-width: 32ch;
     }
 
     .buttons {
       display: grid;
       gap: 12px;
+      margin-top: 22px;
     }
 
     .btn {
-      min-height: 56px;
+      min-height: 58px;
       border-radius: 18px;
       display: flex;
       align-items: center;
       justify-content: center;
-      text-align: center;
-      padding: 12px 14px;
       font-weight: 900;
       font-size: 1rem;
+      text-align: center;
+      padding: 12px 14px;
       color: #fff;
-      box-shadow: 0 12px 26px rgba(0,0,0,.08);
+      box-shadow: 0 10px 22px rgba(0,0,0,.06);
     }
 
     .facebook { background: linear-gradient(135deg, #1877F2, #0f5dc1); }
     .instagram { background: linear-gradient(135deg, #f04b93, #c52d7b); }
-    .google { background: linear-gradient(135deg, #4285F4, #2b66c3); }
+
+    .small-links {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .small-link {
+      min-height: 50px;
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      font-weight: 800;
+      background: #fff;
+      border: 1px solid var(--line);
+      color: var(--text);
+      padding: 10px 12px;
+    }
 
     .footer {
       text-align: center;
       color: var(--muted);
-      font-size: .86rem;
-      padding-top: 14px;
-    }
-
-    @media (max-width: 640px) {
-      .gallery {
-        grid-template-columns: 1fr 1fr;
-      }
-      .tile.large { min-height: 240px; }
-      .tile { min-height: 140px; }
+      font-size: .85rem;
+      padding: 18px 16px 22px;
     }
   </style>
 </head>
 <body>
   <main class="wrap">
-    <section class="hero">
-      <div class="hero-image">
-        <div class="hero-badge">Salon Gallery</div>
+    <section class="card">
+      <div class="hero">
+        <div class="badge">Outside Photo Links</div>
       </div>
-      <div class="hero-body">
+
+      <div class="body">
         <div class="eyebrow">Photo Page</div>
-        <h1>Looks that catch the eye fast.</h1>
-        <p>Beautiful gallery layout first, then later we can replace these sample photos with your real salon work and client nail sets.</p>
+        <h1>See more salon photos here.</h1>
+        <p>Open our official pages to view nail photos, salon updates, and recent designs.</p>
+
+        <div class="buttons">
+          <a class="btn facebook" href="https://www.facebook.com/nailodessa/photos" target="_blank" rel="noopener noreferrer">View Facebook Photos</a>
+          <a class="btn instagram" href="https://www.instagram.com/anniesnailsodessa" target="_blank" rel="noopener noreferrer">View Instagram Photos</a>
+        </div>
+
+        <div class="small-links">
+          <a class="small-link" href="https://www.lldtek.org/salon/appt/NDc1NjJ8YW5uaWU5ODB8VFhfMDc5ODB8ZmFiOTdiNzJlZDQ4Y2YzZjY2NTZlZDQ2ZjM2ZGVjYTQ=" target="_blank" rel="noopener noreferrer">Book Now</a>
+          <a class="small-link" href="review.html">Reviews</a>
+        </div>
+      </div>
+
+      <div class="footer">
+        Annie's Nails &amp; Spa • Odessa, Texas
       </div>
     </section>
-
-    <section class="gallery">
-      <div class="tile large one"><div class="label">Featured nails</div></div>
-      <div class="tile two"><div class="label">Gel polish</div></div>
-      <div class="tile three"><div class="label">Nail art</div></div>
-      <div class="tile four"><div class="label">Salon vibe</div></div>
-      <div class="tile five"><div class="label">Fresh set</div></div>
-    </section>
-
-    <section class="links-card">
-      <h2>See more real photos</h2>
-      <p>Open your salon pages to view more recent updates, customer photos, and gallery posts.</p>
-      <div class="buttons">
-        <a class="btn facebook" href="https://www.facebook.com/nailodessa/photos" target="_blank" rel="noopener noreferrer">View Facebook Photos</a>
-        <a class="btn instagram" href="https://www.instagram.com/anniesnailsodessa" target="_blank" rel="noopener noreferrer">View Instagram Gallery</a>
-        <a class="btn google" href="https://www.google.com/maps/place/Annie's+Nails+%26+Spa/@31.8745932,-102.3481688" target="_blank" rel="noopener noreferrer">View Google Photos</a>
-      </div>
-    </section>
-
-    <div class="footer">Annie's Nails &amp; Spa • Odessa, Texas</div>
   </main>
 </body>
 </html>
