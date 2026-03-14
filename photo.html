@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
-  <title>Annie's Nails & Spa | Photos</title>
-  <meta name="description" content="View salon photos and nail designs from Annie's Nails & Spa in Odessa, Texas." />
+  <title>Annie's Nails & Spa | Photo Gallery</title>
+  <meta name="description" content="Explore nail designs and salon photos from Annie's Nails & Spa in Odessa, Texas." />
   <meta name="theme-color" content="#111111" />
   <style>
     :root {
@@ -18,20 +18,26 @@
       --accent-dark: #a96955;
       --shadow: 0 14px 36px rgba(0,0,0,.08);
       --radius: 24px;
-      --max: 520px;
+      --max: 560px;
     }
 
-    * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+    * {
+      box-sizing: border-box;
+      -webkit-tap-highlight-color: transparent;
+    }
 
     body {
       margin: 0;
-      font-family: Inter, Arial, Helvetica, sans-serif;
+      font-family: Arial, Helvetica, sans-serif;
       color: var(--text);
       background: radial-gradient(circle at top, #fff0e8 0%, transparent 26%), var(--bg);
       line-height: 1.5;
     }
 
-    a { color: inherit; text-decoration: none; }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
     .wrap {
       width: min(calc(100% - 24px), var(--max));
@@ -52,20 +58,20 @@
     }
 
     .hero {
-      height: 220px;
-      background:
-        linear-gradient(rgba(31,26,24,.18), rgba(31,26,24,.26)),
-        url('https://images.unsplash.com/photo-1632345031435-8727f6897d53?auto=format&fit=crop&w=1200&q=80') center/cover;
       position: relative;
+      height: 250px;
+      background:
+        linear-gradient(rgba(31,26,24,.16), rgba(31,26,24,.28)),
+        url("https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=1200&q=80") center/cover;
     }
 
     .badge {
       position: absolute;
-      left: 14px;
-      bottom: 14px;
-      background: rgba(255,255,255,.92);
-      color: #181615;
-      padding: 8px 12px;
+      left: 16px;
+      bottom: 16px;
+      background: rgba(255,255,255,.94);
+      color: var(--text);
+      padding: 8px 14px;
       border-radius: 999px;
       font-size: .78rem;
       font-weight: 800;
@@ -91,40 +97,89 @@
 
     h1 {
       margin: 0;
-      font-size: clamp(1.9rem, 8vw, 2.5rem);
-      line-height: 1.03;
+      font-size: clamp(2rem, 8vw, 2.8rem);
+      line-height: 1.04;
       letter-spacing: -.04em;
     }
 
-    p {
+    .intro {
       margin: 12px auto 0;
       color: var(--muted);
       font-size: .96rem;
-      max-width: 32ch;
+      max-width: 33ch;
+    }
+
+    .preview-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-top: 22px;
+      margin-bottom: 18px;
+    }
+
+    .preview {
+      min-height: 120px;
+      border-radius: 18px;
+      overflow: hidden;
+      position: relative;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--line);
+      background-size: cover;
+      background-position: center;
+    }
+
+    .preview.one {
+      background-image:
+        linear-gradient(rgba(0,0,0,.10), rgba(0,0,0,.20)),
+        url("https://images.unsplash.com/photo-1632345031435-8727f6897d53?auto=format&fit=crop&w=900&q=80");
+    }
+
+    .preview.two {
+      background-image:
+        linear-gradient(rgba(0,0,0,.10), rgba(0,0,0,.20)),
+        url("https://images.unsplash.com/photo-1519014816548-bf5fe059798b?auto=format&fit=crop&w=900&q=80");
+    }
+
+    .preview-label {
+      position: absolute;
+      left: 10px;
+      bottom: 10px;
+      background: rgba(255,255,255,.92);
+      color: var(--text);
+      padding: 6px 10px;
+      border-radius: 999px;
+      font-size: .76rem;
+      font-weight: 800;
     }
 
     .buttons {
       display: grid;
       gap: 12px;
-      margin-top: 22px;
+      margin-top: 8px;
     }
 
     .btn {
-      min-height: 58px;
+      min-height: 60px;
       border-radius: 18px;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-weight: 900;
-      font-size: 1rem;
+      gap: 10px;
       text-align: center;
       padding: 12px 14px;
       color: #fff;
+      font-weight: 900;
+      font-size: 1rem;
       box-shadow: 0 10px 22px rgba(0,0,0,.06);
     }
 
-    .facebook { background: linear-gradient(135deg, #1877F2, #0f5dc1); }
-    .instagram { background: linear-gradient(135deg, #f04b93, #c52d7b); }
+    .facebook {
+      background: linear-gradient(135deg, #1877F2, #0f5dc1);
+    }
+
+    .instagram {
+      background: linear-gradient(135deg, #f04b93, #c52d7b);
+    }
 
     .small-links {
       display: grid;
@@ -134,7 +189,7 @@
     }
 
     .small-link {
-      min-height: 50px;
+      min-height: 52px;
       border-radius: 16px;
       display: flex;
       align-items: center;
@@ -151,7 +206,7 @@
       text-align: center;
       color: var(--muted);
       font-size: .85rem;
-      padding: 18px 16px 22px;
+      padding: 18px 16px 24px;
     }
   </style>
 </head>
@@ -159,22 +214,43 @@
   <main class="wrap">
     <section class="card">
       <div class="hero">
-        <div class="badge">Outside Photo Links</div>
+        <div class="badge">Salon Gallery</div>
       </div>
 
       <div class="body">
         <div class="eyebrow">Photo Page</div>
-        <h1>See more salon photos here.</h1>
-        <p>Open our official pages to view nail photos, salon updates, and recent designs.</p>
+        <h1>Explore our latest salon photos.</h1>
+        <p class="intro">
+          Browse our nail designs, salon updates, and recent beauty work on our official pages.
+        </p>
+
+        <div class="preview-grid">
+          <div class="preview one">
+            <div class="preview-label">Fresh sets</div>
+          </div>
+          <div class="preview two">
+            <div class="preview-label">Nail art</div>
+          </div>
+        </div>
 
         <div class="buttons">
-          <a class="btn facebook" href="https://www.facebook.com/nailodessa/photos" target="_blank" rel="noopener noreferrer">View Facebook Photos</a>
-          <a class="btn instagram" href="https://www.instagram.com/anniesnailsodessa" target="_blank" rel="noopener noreferrer">View Instagram Photos</a>
+          <a class="btn facebook" href="https://www.facebook.com/nailodessa/photos" target="_blank" rel="noopener noreferrer">
+            View Facebook Photos
+          </a>
+
+          <a class="btn instagram" href="https://www.instagram.com/anniesnailsodessa" target="_blank" rel="noopener noreferrer">
+            View Instagram Photos
+          </a>
         </div>
 
         <div class="small-links">
-          <a class="small-link" href="https://www.lldtek.org/salon/appt/NDc1NjJ8YW5uaWU5ODB8VFhfMDc5ODB8ZmFiOTdiNzJlZDQ4Y2YzZjY2NTZlZDQ2ZjM2ZGVjYTQ=" target="_blank" rel="noopener noreferrer">Book Now</a>
-          <a class="small-link" href="review.html">Reviews</a>
+          <a class="small-link" href="https://www.lldtek.org/salon/appt/NDc1NjJ8YW5uaWU5ODB8VFhfMDc5ODB8ZmFiOTdiNzJlZDQ4Y2YzZjY2NTZlZDQ2ZjM2ZGVjYTQ=" target="_blank" rel="noopener noreferrer">
+            Book Now
+          </a>
+
+          <a class="small-link" href="review.html">
+            Reviews
+          </a>
         </div>
       </div>
 
