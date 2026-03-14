@@ -107,12 +107,23 @@
 }
 
 .tag-row{
-display:flex;
-flex-wrap:wrap;
-gap:10px;
-margin-top:16px;
-position:relative;
-z-index:4;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.tag{
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: rgba(255,248,245,0.92);
+  color: #7b594b;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .3px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
 }
 
 @keyframes heroSlide{
@@ -186,6 +197,12 @@ z-index:4;
     gap: 8px;
     margin-top: 12px;
   }
+
+  .tag{
+    padding: 8px 12px;
+    font-size: 11px;
+  }
+}
     :root{
       --bg:#fdf7f3;
       --card:rgba(255,255,255,.96);
@@ -388,27 +405,24 @@ z-index:4;
     }
 
     .tag-row{
-  display:flex;
-  flex-wrap:wrap;
-  gap:10px;
-  margin-top:16px;
-  position:relative;
-  z-index:4;
-}
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top:16px;
+    }
 
     .tag{
-  padding:10px 16px;
-  border-radius:999px;
-  font-size:12px;
-  font-weight:800;
-  letter-spacing:.05em;
-  text-transform:uppercase;
-  color:#4a2d24;
-  background:rgba(255,255,255,0.95);
-  border:1px solid rgba(255,255,255,0.6);
-  box-shadow:0 10px 24px rgba(0,0,0,0.18);
-  backdrop-filter:blur(4px);
-}
+      padding:9px 14px;
+      border-radius:999px;
+      font-size:12px;
+      font-weight:800;
+      letter-spacing:.04em;
+      text-transform:uppercase;
+      color:#755547;
+      background:linear-gradient(180deg, #fffdfc, #f9eee8);
+      border:1px solid #ecd9cf;
+      box-shadow:0 8px 18px rgba(0,0,0,.05);
+    }
 
     .quick-grid{
       display:grid;
@@ -730,7 +744,7 @@ z-index:4;
 
   <div class="hero-overlay"></div>
 
-  <div class="hero-badge">Voted Best of the Permian Basin 2026</div>
+  <div class="hero-badge">Voted Best of the Permian Basin</div>
 
   <div class="hero-caption">
 
