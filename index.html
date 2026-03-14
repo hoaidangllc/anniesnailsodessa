@@ -53,6 +53,33 @@ content="Annie's Nails & Spa is a top rated nail salon in Odessa TX offering man
   />
 
   <style>
+    .floating-contact{
+position:fixed;
+right:20px;
+bottom:120px;
+display:flex;
+flex-direction:column;
+gap:12px;
+z-index:9999;
+}
+
+.call-btn{
+background:#c88b76;
+color:white;
+padding:14px 18px;
+border-radius:30px;
+text-decoration:none;
+font-weight:bold;
+}
+
+.dir-btn{
+background:#4285F4;
+color:white;
+padding:14px 18px;
+border-radius:30px;
+text-decoration:none;
+font-weight:bold;
+}
     :root{
       --bg:#fdf7f3;
       --bg-2:#f8eee9;
@@ -920,6 +947,19 @@ content="Annie's Nails & Spa is a top rated nail salon in Odessa TX offering man
       Book Now
     </a>
   </div>
+  
+<div class="floating-contact">
+
+<a href="tel:+14322999999" class="call-btn">
+📞 Call
+</a>
+
+<a href="https://www.google.com/maps/dir/?api=1&destination=2613+N+Grandview+Ave+Odessa+TX"
+target="_blank" class="dir-btn">
+📍 Directions
+</a>
+
+</div>
 
 </body>
 </html>
