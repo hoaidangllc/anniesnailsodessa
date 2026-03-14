@@ -1,299 +1,259 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+  <title>Annie's Nails & Spa | Odessa TX Nail Salon</title>
+  <meta name="description" content="Annie's Nails & Spa in Odessa Texas. Book nail appointments, see price menu, photos and reviews." />
+  <meta name="theme-color" content="#111111" />
+  <style>
+    :root {
+      --bg: #fff8f5;
+      --card: #ffffff;
+      --text: #222;
+      --muted: #777;
+      --line: #eadfd9;
+      --accent: #d08c73;
+      --shadow: 0 10px 25px rgba(0,0,0,.08);
+      --radius: 20px;
+      --max: 520px;
+    }
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #fff8f5;
+      color: var(--text);
+    }
 
-<title>Annie's Nails & Spa | Odessa TX Nail Salon</title>
+    a { text-decoration: none; color: inherit; }
 
-<meta name="description" content="Annie's Nails & Spa in Odessa Texas. Book nail appointments, see price menu, photos and reviews.">
+    .container {
+      max-width: var(--max);
+      margin: auto;
+      padding: 16px;
+      padding-bottom: 96px;
+    }
 
-<style>
+    .card {
+      background: white;
+      border-radius: 20px;
+      padding: 20px;
+      margin-bottom: 16px;
+      box-shadow: var(--shadow);
+    }
 
-body{
-margin:0;
-font-family:Arial, Helvetica, sans-serif;
-background:#fff8f5;
-color:#222;
-}
+    h1 {
+      margin: 0;
+      font-size: 28px;
+    }
 
-.container{
-max-width:520px;
-margin:auto;
-padding:16px;
-}
+    h2 {
+      margin: 0 0 12px;
+      font-size: 20px;
+    }
 
-.card{
-background:white;
-border-radius:20px;
-padding:20px;
-margin-bottom:16px;
-box-shadow:0 10px 25px rgba(0,0,0,0.08);
-}
+    .subtitle {
+      color: var(--muted);
+      margin-top: 6px;
+      font-size: 14px;
+    }
 
-h1{
-margin:0;
-font-size:28px;
-}
+    .section-note {
+      color: var(--muted);
+      margin-top: -4px;
+      margin-bottom: 12px;
+      font-size: 14px;
+    }
 
-h2{
-margin-top:0;
-font-size:20px;
-}
+    .btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 56px;
+      border-radius: 16px;
+      font-weight: bold;
+      text-decoration: none;
+      margin-top: 10px;
+      text-align: center;
+      padding: 12px 14px;
+    }
 
-.subtitle{
-color:#777;
-margin-top:6px;
-font-size:14px;
-}
+    .btn-primary {
+      background: var(--accent);
+      color: white;
+    }
 
-.btn{
-display:flex;
-align-items:center;
-justify-content:center;
-height:56px;
-border-radius:16px;
-font-weight:bold;
-text-decoration:none;
-margin-top:10px;
-}
+    .btn-secondary {
+      background: white;
+      border: 1px solid #ddd;
+      color: #222;
+    }
 
-.btn-primary{
-background:#d08c73;
-color:white;
-}
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
 
-.btn-secondary{
-background:white;
-border:1px solid #ddd;
-color:#222;
-}
+    .service {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 10px 0;
+      border-bottom: 1px solid #eee;
+      font-size: 14px;
+    }
 
-.grid{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:10px;
-}
+    .footer {
+      text-align: center;
+      font-size: 13px;
+      color: #777;
+      margin-top: 20px;
+    }
 
-.section{
-margin-top:10px;
-}
+    .social {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-top: 10px;
+    }
 
-.service{
-display:flex;
-justify-content:space-between;
-padding:10px 0;
-border-bottom:1px solid #eee;
-font-size:14px;
-}
+    .map-wrap {
+      overflow: hidden;
+      border-radius: 16px;
+      border: 1px solid var(--line);
+    }
 
-.footer{
-text-align:center;
-font-size:13px;
-color:#777;
-margin-top:20px;
-}
+    .sticky-book {
+      position: fixed;
+      left: 12px;
+      right: 12px;
+      bottom: 12px;
+      z-index: 50;
+    }
 
-.social{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:10px;
-margin-top:10px;
-}
-
-</style>
-
+    .sticky-book a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 58px;
+      border-radius: 18px;
+      background: var(--accent);
+      color: #fff;
+      font-weight: 900;
+      box-shadow: 0 16px 30px rgba(208,140,115,.35);
+    }
+  </style>
 </head>
-
 <body>
 
 <div class="container">
 
-<div class="card">
+  <div class="card">
 
-<div style="text-align:center;margin-bottom:10px;">
+    <div style="text-align:center;margin-bottom:10px;">
+      <img src="logo.png" alt="Annie's Nails & Spa Logo" style="width:150px;margin-bottom:10px;">
+    </div>
 
-<img src="logo.png" alt="Annie's Nails & Spa Logo" style="width:150px;margin-bottom:10px;">
+    <img src="cover.jpg" alt="Annie's Nails & Spa Odessa Texas" style="width:100%;border-radius:20px;margin-bottom:15px;">
 
-</div>
+    <div class="subtitle">
+      2613 N Grandview Ave<br>
+      Odessa TX 79761
+    </div>
 
-<img src="cover.jpg" alt="Annie's Nails & Spa Odessa Texas" style="width:100%;border-radius:20px;margin-bottom:15px;">
+    <a class="btn btn-primary"
+      href="https://www.lldtek.org/salon/appt/NDc1NjJ8YW5uaWU5ODB8VFhfMDc5ODB8ZmFiOTdiNzJlZDQ4Y2YzZjY2NTZlZDQ2ZjM2ZGVjYTQ="
+      target="_blank" rel="noopener noreferrer">
+      BOOK APPOINTMENT
+    </a>
 
-<div class="subtitle">
-2613 N Grandview Ave<br>
-Odessa TX 79761
-</div>
+    <div class="grid">
+      <a class="btn btn-secondary"
+        href="tel:+14322999999">
+        Call Salon
+      </a>
 
-<a class="btn btn-primary"
-href="https://www.lldtek.org/salon/appt/NDc1NjJ8YW5uaWU5ODB8VFhfMDc5ODB8ZmFiOTdiNzJlZDQ4Y2YzZjY2NTZlZDQ2ZjM2ZGVjYTQ="
-target="_blank">
+      <a class="btn btn-secondary"
+        href="https://www.google.com/maps/place/Annie's+Nails+%26+Spa/@31.8745932,-102.3481688,883m/data=!3m2!1e3!4b1!4m6!3m5!1s0x86fbc932c881c71b:0x7ff74000061e8571!8m2!3d31.8745932!4d-102.3481688!16s%2Fg%2F11b76h06nn?entry=ttu&g_ep=EgoyMDI2MDMxMS4wIKXMDSoASAFQAw%3D%3D"
+        target="_blank" rel="noopener noreferrer">
+        Directions
+      </a>
+    </div>
 
-BOOK APPOINTMENT
+  </div>
 
-</a>
+  <div class="card">
+    <h2>Price Menu</h2>
 
-<div class="grid">
+    <div class="service"><span>Gel Manicure</span><span>$35</span></div>
+    <div class="service"><span>Dip Powder</span><span>$40+</span></div>
+    <div class="service"><span>Full Set</span><span>$50+</span></div>
+    <div class="service"><span>Basic Pedicure</span><span>$30</span></div>
+    <div class="service"><span>Deluxe Pedicure</span><span>$40</span></div>
+    <div class="service"><span>Luxury Pedicure</span><span>$50+</span></div>
 
-<a class="btn btn-secondary"
-href="tel:+14322999999">
-Call Salon
-</a>
+    <a class="btn btn-secondary" href="menu.html">VIEW FULL PRICE MENU</a>
+  </div>
 
-<a class="btn btn-secondary"
-href="https://www.google.com/maps/place/Annie's+Nails+%26+Spa/@31.8745932,-102.3481688,883m"
-target="_blank">
-Directions
-</a>
+  <div class="card">
+    <h2>Hours</h2>
 
-</div>
+    <div class="service"><span>Monday</span><span>Closed</span></div>
+    <div class="service"><span>Tue - Sat</span><span>9:30 AM - 7:30 PM</span></div>
+    <div class="service"><span>Sunday</span><span>12:00 PM - 5:30 PM</span></div>
+  </div>
 
-</div>
+  <div class="card">
+    <h2>Photos</h2>
+    <a class="btn btn-secondary" href="photo.html">VIEW SALON PHOTOS</a>
+  </div>
 
-<div class="card">
+  <div class="card">
+    <h2>Reviews</h2>
+    <div class="grid">
+      <a class="btn btn-secondary" href="https://g.page/r/CXGFHgYAQPd_EB0/review" target="_blank" rel="noopener noreferrer">Google Review</a>
+      <a class="btn btn-secondary" href="https://www.facebook.com/nailodessa/reviews" target="_blank" rel="noopener noreferrer">Facebook Review</a>
+      <a class="btn btn-secondary" href="https://www.yelp.com/writeareview/biz/annies-nails-and-spa-odessa" target="_blank" rel="noopener noreferrer">Yelp Review</a>
+      <a class="btn btn-secondary" href="review.html">View Reviews</a>
+    </div>
+  </div>
 
-<h2>Price Menu</h2>
+  <div class="card">
+    <h2>Social Media</h2>
+    <div class="social">
+      <a class="btn btn-secondary" href="https://www.facebook.com/nailodessa" target="_blank" rel="noopener noreferrer">Facebook</a>
+      <a class="btn btn-secondary" href="https://www.instagram.com/anniesnailsodessa" target="_blank" rel="noopener noreferrer">Instagram</a>
+      <a class="btn btn-secondary" href="https://www.tiktok.com/@anniesnailsodessa" target="_blank" rel="noopener noreferrer">TikTok</a>
+      <a class="btn btn-secondary" href="https://www.yelp.com/biz/annies-nails-and-spa-odessa" target="_blank" rel="noopener noreferrer">Yelp</a>
+    </div>
+  </div>
 
-<div class="service">
-<span>Gel Manicure</span>
-<span>$35</span>
-</div>
+  <div class="card">
+    <h2>Location</h2>
+    <p class="section-note">Use the map below or tap Directions for the exact salon location.</p>
+    <div class="map-wrap">
+      <iframe
+        src="https://www.google.com/maps?q=2613+N+Grandview+Ave,+Odessa,+TX+79761&output=embed"
+        width="100%"
+        height="260"
+        style="border:0;display:block;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
 
-<div class="service">
-<span>Dip Powder</span>
-<span>$40+</span>
-</div>
-
-<div class="service">
-<span>Full Set</span>
-<span>$50+</span>
-</div>
-
-<div class="service">
-<span>Basic Pedicure</span>
-<span>$30</span>
-</div>
-
-<div class="service">
-<span>Deluxe Pedicure</span>
-<span>$40</span>
-</div>
-
-<div class="service">
-<span>Luxury Pedicure</span>
-<span>$50+</span>
-</div>
-
-<a class="btn btn-secondary"
-href="menu.html">
-VIEW FULL PRICE MENU
-</a>
-
-</div>
-
-<div class="card">
-
-<h2>Hours</h2>
-
-<div class="service">
-<span>Monday</span>
-<span>Closed</span>
-</div>
-
-<div class="service">
-<span>Tue - Sat</span>
-<span>9:30 AM - 7:30 PM</span>
-</div>
-
-<div class="service">
-<span>Sunday</span>
-<span>12:00 PM - 5:30 PM</span>
-</div>
-
-</div>
-
-<div class="card">
-
-<h2>Photos</h2>
-
-<a class="btn btn-secondary"
-href="photo.html">
-VIEW SALON PHOTOS
-</a>
+  <div class="footer">
+    Annie's Nails &amp; Spa • Odessa Texas
+  </div>
 
 </div>
 
-<div class="card">
-
-<h2>Reviews</h2>
-
-<div class="grid">
-
-<a class="btn btn-secondary"
-href="https://g.page/r/CXGFHgYAQPd_EB0/review"
-target="_blank">
-Google Review
-</a>
-
-<a class="btn btn-secondary"
-href="https://www.facebook.com/nailodessa/reviews"
-target="_blank">
-Facebook Review
-</a>
-
-<a class="btn btn-secondary"
-href="https://www.yelp.com/writeareview/biz/annies-nails-and-spa-odessa"
-target="_blank">
-Yelp Review
-</a>
-
-<a class="btn btn-secondary"
-href="review.html">
-View Reviews
-</a>
-
-</div>
-
-</div>
-
-<div class="card">
-
-<h2>Social Media</h2>
-
-<div class="social">
-
-<a class="btn btn-secondary"
-href="https://www.facebook.com/nailodessa"
-target="_blank">
-Facebook
-</a>
-
-<a class="btn btn-secondary"
-href="https://www.instagram.com/anniesnailsodessa"
-target="_blank">
-Instagram
-</a>
-
-<a class="btn btn-secondary"
-href="https://www.tiktok.com/@anniesnailsodessa"
-target="_blank">
-TikTok
-</a>
-
-<a class="btn btn-secondary"
-href="https://www.yelp.com/biz/annies-nails-and-spa-odessa"
-target="_blank">
-Yelp
-</a>
-
-</div>
-
-</div>
-
-<div class="footer">
-Annie's Nails & Spa • Odessa Texas
-</div>
-
+<div class="sticky-book">
+  <a href="https://www.lldtek.org/salon/appt/NDc1NjJ8YW5uaWU5ODB8VFhfMDc5ODB8ZmFiOTdiNzJlZDQ4Y2YzZjY2NTZlZDQ2ZjM2ZGVjYTQ=" target="_blank" rel="noopener noreferrer">BOOK NOW</a>
 </div>
 
 </body>
