@@ -660,6 +660,13 @@
           <strong>Reviews</strong>
           <span>Leave feedback on Google, Facebook, or Yelp.</span>
         </a>
+
+        <a class="nav-card" href="blog.html">
+          <i class="fa-solid fa-pen"></i>
+          <strong>Nail Blog</strong>
+          <span>Beauty tips, nail care, and Odessa salon updates.</span>
+       </a>
+
       </div>
     </div>
 
