@@ -2,47 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
-<title>Annie's Nails & Spa | Odessa TX Nail Salon</title>
-
-<meta name="description" content="Annie's Nails & Spa in Odessa Texas. Book nail appointments, see price menu, photos and reviews.">
-<meta name="theme-color" content="#111111" />
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+  <title>Annie's Nails & Spa | Odessa TX Nail Salon</title>
+  <meta name="description" content="Annie's Nails & Spa in Odessa Texas. Book nail appointments, see price menu, photos and reviews." />
+  <meta name="theme-color" content="#111111" />
   <style>
-    .social-icons{
-display:flex;
-justify-content:center;
-align-items:center;
-gap:18px;
-margin-top:16px;
-flex-wrap:wrap;
-}
-
-.social-icons a{
-width:56px;
-height:56px;
-border-radius:50%;
-display:flex;
-align-items:center;
-justify-content:center;
-background:#ffffff;
-border:1px solid #eee;
-font-size:22px;
-color:#333;
-box-shadow:0 6px 16px rgba(0,0,0,0.08);
-transition:all 0.25s ease;
-}
-
-.social-icons a:hover{
-transform:translateY(-5px) scale(1.08);
-box-shadow:0 12px 28px rgba(0,0,0,0.18);
-}
-.fa-facebook-f {color:#1877f2;}
-.fa-instagram {color:#e1306c;}
-.fa-tiktok {color:#000;}
-.fa-yelp {color:#d32323;}
-    
     :root {
       --bg: #fff8f5;
       --card: #ffffff;
@@ -193,10 +157,49 @@ box-shadow:0 12px 28px rgba(0,0,0,0.18);
       justify-content: center;
       min-height: 58px;
       border-radius: 18px;
-      background: var(--accent);
+      background: linear-gradient(135deg, var(--accent), #bf775b);
       color: #fff;
       font-weight: 900;
       box-shadow: 0 16px 30px rgba(208,140,115,.35);
+      letter-spacing: .02em;
+    }
+
+    .quick-actions {
+      position: fixed;
+      right: 12px;
+      bottom: 82px;
+      z-index: 49;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .quick-actions a {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #ffffff;
+      border: 1px solid #e7d6cf;
+      box-shadow: 0 10px 22px rgba(0,0,0,.12);
+      font-size: 20px;
+      color: #4b342c;
+      transition: all .22s ease;
+    }
+
+    .quick-actions a:hover {
+      transform: translateY(-3px) scale(1.05);
+      box-shadow: 0 14px 28px rgba(0,0,0,.16);
+    }
+
+    .mini-map-wrap {
+      overflow: hidden;
+      border-radius: 18px;
+      border: 1px solid var(--line);
+      box-shadow: 0 8px 18px rgba(0,0,0,.08);
+      margin-top: 10px;
     }
   </style>
 </head>
@@ -261,53 +264,38 @@ box-shadow:0 12px 28px rgba(0,0,0,0.18);
 
   <div class="card">
     <h2>Photos</h2>
-    <a class="btn action-dark" href="photo.html">VIEW SALON PHOTOS</a>
+    <a class="btn action-strong" href="photo.html">VIEW SALON PHOTOS</a>
   </div>
 
   <div class="card">
-  <h2>Reviews</h2>
-
-  <a class="btn action-dark" href="review.html">
-    VIEW REVIEW PAGE
-  </a>
-
-</div>
+    <h2>Reviews</h2>
+    <div class="grid">
+      <a class="btn btn-secondary" href="https://g.page/r/CXGFHgYAQPd_EB0/review" target="_blank" rel="noopener noreferrer">Google Review</a>
+      <a class="btn btn-secondary" href="https://www.facebook.com/nailodessa/reviews" target="_blank" rel="noopener noreferrer">Facebook Review</a>
+      <a class="btn btn-secondary" href="https://www.yelp.com/writeareview/biz/annies-nails-and-spa-odessa" target="_blank" rel="noopener noreferrer">Yelp Review</a>
+      <a class="btn action-strong" href="review.html">VIEW REVIEW PAGE</a>
+    </div>
+  </div>
 
   <div class="card">
-
-<h2>Follow Us</h2>
-
-<div class="social-icons">
-
-<a href="https://www.facebook.com/nailodessa" target="_blank">
-<i class="fab fa-facebook-f"></i>
-</a>
-
-<a href="https://www.instagram.com/anniesnailsodessa" target="_blank">
-<i class="fab fa-instagram"></i>
-</a>
-
-<a href="https://www.tiktok.com/@anniesnailsodessa" target="_blank">
-<i class="fab fa-tiktok"></i>
-</a>
-
-<a href="https://www.yelp.com/biz/annies-nails-and-spa-odessa" target="_blank">
-<i class="fab fa-yelp"></i>
-</a>
-
-</div>
-
-</div>
+    <h2>Social Media</h2>
+    <div class="social">
+      <a class="btn btn-secondary" href="https://www.facebook.com/nailodessa" target="_blank" rel="noopener noreferrer">Facebook</a>
+      <a class="btn btn-secondary" href="https://www.instagram.com/anniesnailsodessa" target="_blank" rel="noopener noreferrer">Instagram</a>
+      <a class="btn btn-secondary" href="https://www.tiktok.com/@anniesnailsodessa" target="_blank" rel="noopener noreferrer">TikTok</a>
+      <a class="btn btn-secondary" href="https://www.yelp.com/biz/annies-nails-and-spa-odessa" target="_blank" rel="noopener noreferrer">Yelp</a>
+    </div>
+  </div>
 
   <div class="card">
     <h2>Location</h2>
-    <p class="section-note">Use the map below or tap Directions for the exact salon location.</p>
-    <div class="map-wrap">
+    <p class="section-note">Tap Directions or use the map below to find the salon fast.</p>
+    <div class="mini-map-wrap">
       <iframe
-        src="https://www.google.com/maps?q=2613+N+Grandview+Ave,+Odessa,+TX+79761&output=embed"
+        src="https://www.google.com/maps?q=Annie's+Nails+%26+Spa,+2613+N+Grandview+Ave,+Odessa,+TX+79761&output=embed"
         width="100%"
         height="260"
-        style="border:0;display:block;"
+        style="border:0;display:block;filter:grayscale(0.08) contrast(1.02);"
         allowfullscreen=""
         loading="lazy"
         referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -320,9 +308,13 @@ box-shadow:0 12px 28px rgba(0,0,0,0.18);
 
 </div>
 
+<div class="quick-actions">
+  <a href="tel:+14322999999" aria-label="Call Salon">📞</a>
+  <a href="https://www.google.com/maps/place/Annie's+Nails+%26+Spa/@31.8745932,-102.3481688,883m/data=!3m2!1e3!4b1!4m6!3m5!1s0x86fbc932c881c71b:0x7ff74000061e8571!8m2!3d31.8745932!4d-102.3481688!16s%2Fg%2F11b76h06nn?entry=ttu&g_ep=EgoyMDI2MDMxMS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" aria-label="Open Map">📍</a>
+</div>
+
 <div class="sticky-book">
   <a href="https://www.lldtek.org/salon/appt/NDc1NjJ8YW5uaWU5ODB8VFhfMDc5ODB8ZmFiOTdiNzJlZDQ4Y2YzZjY2NTZlZDQ2ZjM2ZGVjYTQ=" target="_blank" rel="noopener noreferrer">BOOK NOW</a>
 </div>
-
 </body>
 </html>
