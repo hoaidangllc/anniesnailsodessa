@@ -1,10 +1,235 @@
-<section class="section-card">
-  <h2>Customer Reviews</h2>
-  <p>See what our clients say and leave your review on your favorite platform.</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+  <title>Annie's Nails & Spa | Leave a Review</title>
+  <meta name="description" content="Leave a review for Annie's Nails & Spa in Odessa, Texas on Google, Facebook, or Yelp." />
+  <meta name="theme-color" content="#111111" />
+  <style>
+    :root {
+      --bg: #fff8f5;
+      --card: #ffffff;
+      --soft: #fdf0ea;
+      --text: #181615;
+      --muted: #6e6763;
+      --line: #eee1da;
+      --accent: #c88b76;
+      --accent-dark: #a96955;
+      --shadow: 0 14px 36px rgba(0,0,0,.08);
+      --radius: 24px;
+      --max: 560px;
+    }
 
-  <div class="button-grid">
-    <a href="https://g.page/r/your-google-review-link" target="_blank">Google Review</a>
-    <a href="https://www.facebook.com/yourpage/reviews" target="_blank">Facebook Review</a>
-    <a href="https://www.yelp.com/biz/your-yelp-link" target="_blank">Yelp Review</a>
-  </div>
-</section>
+    * {
+      box-sizing: border-box;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: radial-gradient(circle at top, #fff0e8 0%, transparent 26%), var(--bg);
+      line-height: 1.5;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .wrap {
+      width: min(calc(100% - 24px), var(--max));
+      margin: 0 auto;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding: 24px 0;
+    }
+
+    .card {
+      width: 100%;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 30px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+
+    .hero {
+      position: relative;
+      height: 250px;
+      background:
+        linear-gradient(rgba(31,26,24,.16), rgba(31,26,24,.28)),
+        url("https://images.unsplash.com/photo-1522338242992-e1a54906a8da?auto=format&fit=crop&w=1200&q=80") center/cover;
+    }
+
+    .badge {
+      position: absolute;
+      left: 16px;
+      bottom: 16px;
+      background: rgba(255,255,255,.94);
+      color: var(--text);
+      padding: 8px 14px;
+      border-radius: 999px;
+      font-size: .78rem;
+      font-weight: 800;
+    }
+
+    .body {
+      padding: 24px 18px 22px;
+      text-align: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      padding: 7px 12px;
+      border-radius: 999px;
+      background: var(--soft);
+      color: var(--accent-dark);
+      font-size: .76rem;
+      font-weight: 900;
+      letter-spacing: .05em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2rem, 8vw, 2.8rem);
+      line-height: 1.04;
+      letter-spacing: -.04em;
+    }
+
+    .intro {
+      margin: 12px auto 0;
+      color: var(--muted);
+      font-size: .96rem;
+      max-width: 34ch;
+    }
+
+    .stars {
+      display: flex;
+      justify-content: center;
+      gap: 6px;
+      margin: 20px 0 18px;
+      font-size: 1.4rem;
+    }
+
+    .stars span {
+      color: #f5b301;
+    }
+
+    .buttons {
+      display: grid;
+      gap: 12px;
+      margin-top: 8px;
+    }
+
+    .btn {
+      min-height: 60px;
+      border-radius: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      text-align: center;
+      padding: 12px 14px;
+      color: #fff;
+      font-weight: 900;
+      font-size: 1rem;
+      box-shadow: 0 10px 22px rgba(0,0,0,.06);
+    }
+
+    .google {
+      background: linear-gradient(135deg, #4285F4, #2b66c3);
+    }
+
+    .facebook {
+      background: linear-gradient(135deg, #1877F2, #0f5dc1);
+    }
+
+    .yelp {
+      background: linear-gradient(135deg, #d32323, #a91b1b);
+    }
+
+    .small-links {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .small-link {
+      min-height: 52px;
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      font-weight: 800;
+      background: #fff;
+      border: 1px solid var(--line);
+      color: var(--text);
+      padding: 10px 12px;
+    }
+
+    .footer {
+      text-align: center;
+      color: var(--muted);
+      font-size: .85rem;
+      padding: 18px 16px 24px;
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <section class="card">
+      <div class="hero">
+        <div class="badge">Leave a Review</div>
+      </div>
+
+      <div class="body">
+        <div class="eyebrow">Thank You</div>
+        <h1>Love your visit? Leave us a review.</h1>
+        <p class="intro">
+          Your support helps Annie's Nails &amp; Spa grow and helps new clients find us faster.
+        </p>
+
+        <div class="stars" aria-label="5 stars">
+          <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+        </div>
+
+        <div class="buttons">
+          <a class="btn google" href="https://g.page/r/CXGFHgYAQPd_EB0/review" target="_blank" rel="noopener noreferrer">
+            Leave a Google Review
+          </a>
+
+          <a class="btn facebook" href="https://www.facebook.com/nailodessa/reviews" target="_blank" rel="noopener noreferrer">
+            Leave a Facebook Review
+          </a>
+
+          <a class="btn yelp" href="https://www.yelp.com/writeareview/biz/annies-nails-and-spa-odessa" target="_blank" rel="noopener noreferrer">
+            Leave a Yelp Review
+          </a>
+        </div>
+
+        <div class="small-links">
+          <a class="small-link" href="https://www.lldtek.org/salon/appt/NDc1NjJ8YW5uaWU5ODB8VFhfMDc5ODB8ZmFiOTdiNzJlZDQ4Y2YzZjY2NTZlZDQ2ZjM2ZGVjYTQ=" target="_blank" rel="noopener noreferrer">
+            Book Now
+          </a>
+
+          <a class="small-link" href="photo.html">
+            Photos
+          </a>
+        </div>
+      </div>
+
+      <div class="footer">
+        Annie's Nails &amp; Spa • Odessa, Texas
+      </div>
+    </section>
+  </main>
+</body>
+</html>
