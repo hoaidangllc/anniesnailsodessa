@@ -1,450 +1,300 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
-  <title>Annie's Nails & Spa | Odessa TX</title>
-  <meta name="description" content="Book your appointment at Annie's Nails & Spa in Odessa, Texas. Mobile-first nail salon website with easy booking, call, directions, reviews, services, gallery, and social links." />
-  <meta name="theme-color" content="#111111" />
-  <style>
-    :root {
-      --bg: #fff8f5;
-      --card: #ffffff;
-      --soft: #fdf0ea;
-      --text: #181615;
-      --muted: #6e6763;
-      --line: #eee1da;
-      --accent: #c88b76;
-      --accent-dark: #a96955;
-      --dark: #1f1a18;
-      --shadow: 0 14px 36px rgba(0,0,0,.08);
-      --radius: 22px;
-      --max: 560px;
-    }
 
-    * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
-    html { scroll-behavior: smooth; }
-    body {
-      margin: 0;
-      font-family: Inter, Arial, Helvetica, sans-serif;
-      color: var(--text);
-      background: radial-gradient(circle at top, #fff0e8 0%, transparent 26%), var(--bg);
-      line-height: 1.5;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    a { color: inherit; text-decoration: none; }
+<title>Annie's Nails & Spa | Odessa TX Nail Salon</title>
 
-    .shell {
-      width: min(calc(100% - 24px), var(--max));
-      margin: 0 auto;
-      padding-bottom: 94px;
-    }
+<meta name="description" content="Annie's Nails & Spa in Odessa Texas. Book nail appointments, see price menu, photos and reviews.">
 
-    .topbar {
-      position: sticky;
-      top: 0;
-      z-index: 50;
-      backdrop-filter: blur(10px);
-      background: rgba(255,248,245,.9);
-      border-bottom: 1px solid rgba(238,225,218,.9);
-    }
+<style>
 
-    .topbar-inner {
-      width: min(calc(100% - 24px), var(--max));
-      margin: 0 auto;
-      padding: 12px 0;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 12px;
-    }
+body{
+margin:0;
+font-family:Arial, Helvetica, sans-serif;
+background:#fff8f5;
+color:#222;
+}
 
-    .brand strong {
-      display: block;
-      font-size: 1rem;
-      letter-spacing: .03em;
-    }
+.container{
+max-width:520px;
+margin:auto;
+padding:16px;
+}
 
-    .brand span {
-      display: block;
-      margin-top: 2px;
-      font-size: .82rem;
-      color: var(--muted);
-    }
+.card{
+background:white;
+border-radius:20px;
+padding:20px;
+margin-bottom:16px;
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
 
-    .mini-book {
-      min-height: 42px;
-      padding: 10px 16px;
-      border-radius: 999px;
-      background: linear-gradient(135deg, var(--accent), var(--accent-dark));
-      color: #fff;
-      font-weight: 800;
-      font-size: .92rem;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 10px 24px rgba(169,105,85,.22);
-    }
+h1{
+margin:0;
+font-size:28px;
+}
 
-    .hero {
-      padding: 18px 0 14px;
-    }
+h2{
+margin-top:0;
+font-size:20px;
+}
 
-    .hero-card {
-      background: var(--card);
-      border: 1px solid var(--line);
-      border-radius: 28px;
-      overflow: hidden;
-      box-shadow: var(--shadow);
-    }
+.subtitle{
+color:#777;
+margin-top:6px;
+font-size:14px;
+}
 
-    .hero-image {
-      height: 240px;
-      background:
-        linear-gradient(rgba(31,26,24,.18), rgba(31,26,24,.25)),
-        url('https://images.unsplash.com/photo-1610992015732-2449b76344bc?auto=format&fit=crop&w=1200&q=80') center/cover;
-      position: relative;
-    }
+.btn{
+display:flex;
+align-items:center;
+justify-content:center;
+height:56px;
+border-radius:16px;
+font-weight:bold;
+text-decoration:none;
+margin-top:10px;
+}
 
-    .hero-badge {
-      position: absolute;
-      left: 14px;
-      bottom: 14px;
-      padding: 8px 12px;
-      border-radius: 999px;
-      background: rgba(255,255,255,.9);
-      color: var(--dark);
-      font-size: .78rem;
-      font-weight: 800;
-    }
+.btn-primary{
+background:#d08c73;
+color:white;
+}
 
-    .hero-body {
-      padding: 20px 18px 18px;
-      text-align: center;
-    }
+.btn-secondary{
+background:white;
+border:1px solid #ddd;
+color:#222;
+}
 
-    .eyebrow {
-      display: inline-flex;
-      padding: 7px 12px;
-      border-radius: 999px;
-      background: var(--soft);
-      color: var(--accent-dark);
-      font-size: .76rem;
-      font-weight: 900;
-      letter-spacing: .05em;
-      text-transform: uppercase;
-      margin-bottom: 12px;
-    }
+.grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:10px;
+}
 
-    h1 {
-      margin: 0;
-      font-size: clamp(2rem, 8vw, 2.8rem);
-      line-height: 1.02;
-      letter-spacing: -.045em;
-    }
+.section{
+margin-top:10px;
+}
 
-    .hero-body p {
-      margin: 12px auto 0;
-      color: var(--muted);
-      font-size: .97rem;
-      max-width: 35ch;
-    }
+.service{
+display:flex;
+justify-content:space-between;
+padding:10px 0;
+border-bottom:1px solid #eee;
+font-size:14px;
+}
 
-    .section {
-      padding-top: 14px;
-    }
+.footer{
+text-align:center;
+font-size:13px;
+color:#777;
+margin-top:20px;
+}
 
-    .card {
-      background: var(--card);
-      border: 1px solid var(--line);
-      border-radius: 24px;
-      box-shadow: var(--shadow);
-      padding: 18px;
-    }
+.social{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:10px;
+margin-top:10px;
+}
 
-    .section-title {
-      margin: 0 0 12px;
-      font-size: 1.12rem;
-      letter-spacing: -.02em;
-    }
+</style>
 
-    .section-note {
-      margin: -4px 0 12px;
-      color: var(--muted);
-      font-size: .92rem;
-    }
-
-    .primary-btn,
-    .grid-btn,
-    .social-btn {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 100%;
-      min-height: 56px;
-      border-radius: 18px;
-      text-align: center;
-      font-weight: 800;
-      font-size: 1rem;
-    }
-
-    .primary-btn {
-      background: linear-gradient(135deg, var(--accent), var(--accent-dark));
-      color: #fff;
-      box-shadow: 0 14px 30px rgba(169,105,85,.24);
-    }
-
-    .grid-2 {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px;
-    }
-
-    .grid-btn,
-    .social-btn {
-      background: #fff;
-      border: 1px solid var(--line);
-      color: var(--text);
-    }
-
-    .stack {
-      display: grid;
-      gap: 12px;
-    }
-
-    .service-list,
-    .info-list {
-      display: grid;
-      gap: 10px;
-    }
-
-    .service-item,
-    .info-item {
-      padding: 14px;
-      border-radius: 16px;
-      background: #fcf8f6;
-      border: 1px solid #f1e5de;
-    }
-
-    .service-item strong,
-    .info-item strong {
-      display: block;
-      font-size: .96rem;
-      margin-bottom: 4px;
-    }
-
-    .service-item span,
-    .info-item span {
-      color: var(--muted);
-      font-size: .92rem;
-    }
-
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px;
-    }
-
-    .gallery-tile {
-      min-height: 130px;
-      border-radius: 18px;
-      overflow: hidden;
-      position: relative;
-      box-shadow: var(--shadow);
-      border: 1px solid var(--line);
-      background-size: cover;
-      background-position: center;
-    }
-
-    .gallery-tile.large {
-      grid-column: 1 / -1;
-      min-height: 220px;
-    }
-
-    .gallery-tile.one { background-image: linear-gradient(rgba(0,0,0,.15), rgba(0,0,0,.25)), url('https://images.unsplash.com/photo-1632345031435-8727f6897d53?auto=format&fit=crop&w=1200&q=80'); }
-    .gallery-tile.two { background-image: linear-gradient(rgba(0,0,0,.12), rgba(0,0,0,.22)), url('https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=1000&q=80'); }
-    .gallery-tile.three { background-image: linear-gradient(rgba(0,0,0,.12), rgba(0,0,0,.22)), url('https://images.unsplash.com/photo-1519014816548-bf5fe059798b?auto=format&fit=crop&w=1000&q=80'); }
-
-    .tile-label {
-      position: absolute;
-      left: 10px;
-      bottom: 10px;
-      background: rgba(255,255,255,.9);
-      color: var(--dark);
-      padding: 7px 10px;
-      border-radius: 999px;
-      font-size: .78rem;
-      font-weight: 800;
-    }
-
-    .review-pills {
-      display: grid;
-      gap: 10px;
-    }
-
-    .review-pill {
-      min-height: 54px;
-      padding: 12px 14px;
-      border-radius: 16px;
-      background: #fff;
-      border: 1px solid var(--line);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      font-weight: 800;
-    }
-
-    .footer-note {
-      text-align: center;
-      color: var(--muted);
-      font-size: .87rem;
-      padding: 20px 8px 0;
-    }
-
-    .sticky-book {
-      position: fixed;
-      left: 12px;
-      right: 12px;
-      bottom: 12px;
-      z-index: 60;
-    }
-
-    .sticky-book a {
-      min-height: 58px;
-      border-radius: 18px;
-      background: linear-gradient(135deg, var(--accent), var(--accent-dark));
-      color: #fff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 900;
-      font-size: 1.02rem;
-      box-shadow: 0 18px 34px rgba(169,105,85,.28);
-    }
-  </style>
 </head>
+
 <body>
-  <div class="topbar">
-    <div class="topbar-inner">
-      <div class="brand">
-        <strong>ANNIE'S NAILS &amp; SPA</strong>
-        <span>Odessa, Texas</span>
-      </div>
-      <a class="mini-book" href="https://www.lldtek.org/salon/appt/NDc1NjJ8YW5uaWU5ODB8VFhfMDc5ODB8ZmFiOTdiNzJlZDQ4Y2YzZjY2NTZlZDQ2ZjM2ZGVjYTQ=" target="_blank" rel="noopener noreferrer">Book Now</a>
-    </div>
-  </div>
 
-  <main class="shell">
-    <section class="hero">
-      <div class="hero-card">
-        <div class="hero-image">
-          <div class="hero-badge">Mobile-first salon website</div>
-        </div>
-        <div class="hero-body">
-          <div class="eyebrow">Simple • Fast • Professional</div>
-          <h1>Beautiful nails. Easy booking.</h1>
-          <p>Designed for phone users first, so your customers can book, call, or get directions in seconds.</p>
-        </div>
-      </div>
-    </section>
+<div class="container">
 
-    <section class="section" id="book">
-      <div class="card">
-        <h2 class="section-title">Book your appointment</h2>
-        <p class="section-note">Main action first. Everything else stays simple.</p>
-        <div class="stack">
-          <a class="primary-btn" href="https://www.lldtek.org/salon/appt/NDc1NjJ8YW5uaWU5ODB8VFhfMDc5ODB8ZmFiOTdiNzJlZDQ4Y2YzZjY2NTZlZDQ2ZjM2ZGVjYTQ=" target="_blank" rel="noopener noreferrer">BOOK APPOINTMENT</a>
-          <div class="grid-2">
-            <a class="grid-btn" href="tel:+14322999999">Call Salon</a>
-            <a class="grid-btn" href="https://www.google.com/maps/search/?api=1&query=2613+N+Grandview+Ave+Odessa+TX+79761" target="_blank" rel="noopener noreferrer">Get Directions</a>
-          </div>
-        </div>
-      </div>
-    </section>
+<div class="card">
 
-    <section class="section">
-      <div class="card">
-        <h2 class="section-title">Popular services</h2>
-        <div class="service-list">
-          <div class="service-item">
-            <strong>Manicure</strong>
-            <span>Clean, polished, and ready for everyday beauty.</span>
-          </div>
-          <div class="service-item">
-            <strong>Pedicure</strong>
-            <span>Relaxing care with upgrade space for deluxe options later.</span>
-          </div>
-          <div class="service-item">
-            <strong>Gel, Acrylic &amp; Nail Art</strong>
-            <span>Perfect spot for your most-booked enhancements and designs.</span>
-          </div>
-        </div>
-      </div>
-    </section>
+<div style="text-align:center">
 
-    <section class="section">
-      <div class="card">
-        <h2 class="section-title">Gallery</h2>
-        <p class="section-note">Temporary images now. We can replace them with your real salon photos anytime.</p>
-        <div class="gallery-grid">
-          <div class="gallery-tile large one"><div class="tile-label">Featured set</div></div>
-          <div class="gallery-tile two"><div class="tile-label">Gel polish</div></div>
-          <div class="gallery-tile three"><div class="tile-label">Nail art</div></div>
-        </div>
-      </div>
-    </section>
+<img 
+src="images/logo.png"
+style="width:120px;margin-bottom:10px">
 
-    <section class="section">
-      <div class="card">
-        <h2 class="section-title">Reviews</h2>
-        <div class="review-pills">
-          <a class="review-pill" href="https://g.page/r/CXGFHgYAQPd_EB0/review" target="_blank" rel="noopener noreferrer">Google Reviews</a>
-          <a class="review-pill" href="https://www.yelp.com/writeareview/biz/annies-nails-and-spa-odessa" target="_blank" rel="noopener noreferrer">Yelp Review</a>
-          <a class="review-pill" href="https://www.facebook.com/nailodessa/reviews" target="_blank" rel="noopener noreferrer">Facebook Review</a>
-        </div>
-      </div>
-    </section>
+<h1>Annie's Nails & Spa</h1>
 
-    <section class="section">
-      <div class="card">
-        <h2 class="section-title">Social</h2>
-        <div class="grid-2">
-          <a class="social-btn" href="https://www.facebook.com/nailodessa" target="_blank" rel="noopener noreferrer">Facebook</a>
-          <a class="social-btn" href="https://www.instagram.com/anniesnailsodessa" target="_blank" rel="noopener noreferrer">Instagram</a>
-          <a class="social-btn" href="https://www.tiktok.com/@anniesnailsodessa" target="_blank">TikTok</a>
-          <a class="social-btn" href="https://www.yelp.com/biz/annies-nails-and-spa-odessa" target="_blank" rel="noopener noreferrer">Yelp</a>
-        </div>
-      </div>
-    </section>
+</div>
 
-    <section class="section">
-      <div class="card">
-        <h2 class="section-title">Salon info</h2>
-        <div class="info-list">
-          <div class="info-item">
-            <strong>Address</strong>
-            <span><a href="https://www.google.com/maps/place/Annie's+Nails+%26+Spa/@31.8745932,-102.3481688,883m/data=!3m2!1e3!4b1!4m6!3m5!1s0x86fbc932c881c71b:0x7ff74000061e8571!8m2!3d31.8745932!4d-102.3481688!16s%2Fg%2F11b76h06nn?entry=ttu&g_ep=EgoyMDI2MDMxMS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer">2613 N Grandview Ave<br>Odessa, TX 79761</a></span>
-          </div>
-          <div class="info-item">
-            <strong>Phone</strong>
-            <span>(432) 299-9999</span>
-          </div>
-          <div class="info-item">
-            <strong>Hours</strong>
-            <span>Add business hours next. Keeping it clean for now.</span>
-          </div>
-        </div>
-      </div>
-    </section>
+<div class="subtitle">
+2613 N Grandview Ave<br>
+Odessa TX 79761
+</div>
 
-    <div class="footer-note">
-      Annie's Nails &amp; Spa • Odessa, Texas
-    </div>
-  </main>
+<a class="btn btn-primary"
+href="https://www.lldtek.org/salon/appt/NDc1NjJ8YW5uaWU5ODB8VFhfMDc5ODB8ZmFiOTdiNzJlZDQ4Y2YzZjY2NTZlZDQ2ZjM2ZGVjYTQ="
+target="_blank">
+BOOK APPOINTMENT
+</a>
 
-  <div class="sticky-book">
-    <a href="https://www.lldtek.org/salon/appt/NDc1NjJ8YW5uaWU5ODB8VFhfMDc5ODB8ZmFiOTdiNzJlZDQ4Y2YzZjY2NTZlZDQ2ZjM2ZGVjYTQ=" target="_blank" rel="noopener noreferrer">BOOK APPOINTMENT</a>
-  </div>
+<div class="grid">
+
+<a class="btn btn-secondary"
+href="tel:+14322999999">
+Call Salon
+</a>
+
+<a class="btn btn-secondary"
+href="https://www.google.com/maps/place/Annie's+Nails+%26+Spa/@31.8745932,-102.3481688,883m"
+target="_blank">
+Directions
+</a>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<h2>Price Menu</h2>
+
+<div class="service">
+<span>Gel Manicure</span>
+<span>$35</span>
+</div>
+
+<div class="service">
+<span>Dip Powder</span>
+<span>$40+</span>
+</div>
+
+<div class="service">
+<span>Full Set</span>
+<span>$50+</span>
+</div>
+
+<div class="service">
+<span>Basic Pedicure</span>
+<span>$30</span>
+</div>
+
+<div class="service">
+<span>Deluxe Pedicure</span>
+<span>$40</span>
+</div>
+
+<div class="service">
+<span>Luxury Pedicure</span>
+<span>$50+</span>
+</div>
+
+<a class="btn btn-secondary"
+href="menu.html">
+VIEW FULL PRICE MENU
+</a>
+
+</div>
+
+<div class="card">
+
+<h2>Hours</h2>
+
+<div class="service">
+<span>Monday</span>
+<span>Closed</span>
+</div>
+
+<div class="service">
+<span>Tue - Sat</span>
+<span>9:30 AM - 7:30 PM</span>
+</div>
+
+<div class="service">
+<span>Sunday</span>
+<span>12:00 PM - 5:30 PM</span>
+</div>
+
+</div>
+
+<div class="card">
+
+<h2>Photos</h2>
+
+<a class="btn btn-secondary"
+href="photo.html">
+VIEW SALON PHOTOS
+</a>
+
+</div>
+
+<div class="card">
+
+<h2>Reviews</h2>
+
+<div class="grid">
+
+<a class="btn btn-secondary"
+href="https://g.page/r/CXGFHgYAQPd_EB0/review"
+target="_blank">
+Google Review
+</a>
+
+<a class="btn btn-secondary"
+href="https://www.facebook.com/nailodessa/reviews"
+target="_blank">
+Facebook Review
+</a>
+
+<a class="btn btn-secondary"
+href="https://www.yelp.com/writeareview/biz/annies-nails-and-spa-odessa"
+target="_blank">
+Yelp Review
+</a>
+
+<a class="btn btn-secondary"
+href="review.html">
+View Reviews
+</a>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<h2>Social Media</h2>
+
+<div class="social">
+
+<a class="btn btn-secondary"
+href="https://www.facebook.com/nailodessa"
+target="_blank">
+Facebook
+</a>
+
+<a class="btn btn-secondary"
+href="https://www.instagram.com/anniesnailsodessa"
+target="_blank">
+Instagram
+</a>
+
+<a class="btn btn-secondary"
+href="https://www.tiktok.com/@anniesnailsodessa"
+target="_blank">
+TikTok
+</a>
+
+<a class="btn btn-secondary"
+href="https://www.yelp.com/biz/annies-nails-and-spa-odessa"
+target="_blank">
+Yelp
+</a>
+
+</div>
+
+</div>
+
+<div class="footer">
+Annie's Nails & Spa • Odessa Texas
+</div>
+
+</div>
+
 </body>
 </html>
