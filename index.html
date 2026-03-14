@@ -2,212 +2,30 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
+  />
   <title>Annie's Nails & Spa | Odessa TX Nail Salon</title>
-  <meta name="description" content="Annie's Nails & Spa in Odessa, Texas. Book appointments, view services, salon photos, reviews, and directions." />
+  <meta
+    name="description"
+    content="Annie's Nails & Spa in Odessa, Texas. Book appointments, view services, salon photos, reviews, and directions."
+  />
   <meta name="theme-color" content="#241a17" />
 
-  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
 
   <style>
-  .hero-image{
-  position: relative;
-  overflow: hidden;
-  border-radius: 28px;
-  min-height: 520px;
-  background: #111;
-}
-
-.hero-slider{
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  overflow: hidden;
-}
-
-.hero-slider img{
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0;
-  transform: scale(1.03);
-  animation: heroSlide 15s infinite;
-  transition: opacity 1s ease-in-out, transform 6s ease-in-out;
-  will-change: opacity, transform;
-}
-
-.hero-slider img:nth-child(1){
-  animation-delay: 0s;
-}
-
-.hero-slider img:nth-child(2){
-  animation-delay: 5s;
-}
-
-.hero-slider img:nth-child(3){
-  animation-delay: 10s;
-}
-
-.hero-overlay{
-  position:absolute;
-  inset:0;
-  z-index:2;
-  background:
-    linear-gradient(to bottom, rgba(0,0,0,0.25), rgba(0,0,0,0.25) 40%, rgba(0,0,0,0.55) 75%, rgba(0,0,0,0.75)),
-    radial-gradient(120% 80% at 20% 20%, rgba(0,0,0,0.18), transparent 60%);
-  pointer-events:none;
-}
-
-.hero-badge,
-.hero-caption,
-.tag-row{
-  position: relative;
-  z-index: 3;
-}
-
-.hero-badge{
-  display: inline-block;
-  margin: 18px 0 0 18px;
-  padding: 10px 16px;
-  border-radius: 999px;
-  background: rgba(255,248,245,0.92);
-  color: #7b594b;
-  font-weight: 700;
-  font-size: 13px;
-  letter-spacing: .3px;
-  box-shadow: 0 10px 24px rgba(0,0,0,0.08);
-}
-
-.hero-caption{
-  position: absolute;
-  left: 24px;
-  right: 24px;
-  bottom: 24px;
-  color: #fff;
-}
-
-.hero-caption strong{
-  display: block;
-  font-size: clamp(28px, 4vw, 46px);
-  line-height: 1.06;
-  letter-spacing: -0.02em;
-  margin-bottom: 10px;
-  text-shadow: 0 3px 18px rgba(0,0,0,0.22);
-}
-
-.hero-caption div{
-  max-width: 720px;
-  font-size: 16px;
-  line-height: 1.6;
-  color: rgba(255,255,255,0.92);
-  text-shadow: 0 2px 10px rgba(0,0,0,0.18);
-}
-
-.tag-row{
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 14px;
-}
-
-.tag{
-  display: inline-flex;
-  align-items: center;
-  padding: 10px 14px;
-  border-radius: 999px;
-  background: rgba(255,248,245,0.92);
-  color: #7b594b;
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: .3px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
-}
-
-@keyframes heroSlide{
-  0%{
-    opacity: 0;
-    transform: scale(1.03);
-  }
-  5%{
-    opacity: 1;
-    transform: scale(1);
-  }
-  30%{
-    opacity: 1;
-    transform: scale(1);
-  }
-  35%{
-    opacity: 0;
-    transform: scale(1.02);
-  }
-  100%{
-    opacity: 0;
-    transform: scale(1.03);
-  }
-}
-
-@media (max-width: 900px){
-  .hero-image{
-    min-height: 460px;
-  }
-
-  .hero-caption{
-    left: 18px;
-    right: 18px;
-    bottom: 18px;
-  }
-
-  .hero-caption div{
-    font-size: 15px;
-  }
-}
-
-@media (max-width: 640px){
-  .hero-image{
-    min-height: 400px;
-    border-radius: 22px;
-  }
-
-  .hero-badge{
-    margin: 14px 0 0 14px;
-    padding: 9px 14px;
-    font-size: 12px;
-  }
-
-  .hero-caption{
-    left: 16px;
-    right: 16px;
-    bottom: 16px;
-  }
-
-  .hero-caption strong{
-    font-size: 30px;
-    margin-bottom: 8px;
-  }
-
-  .hero-caption div{
-    font-size: 14px;
-    line-height: 1.5;
-  }
-
-  .tag-row{
-    gap: 8px;
-    margin-top: 12px;
-  }
-
-  .tag{
-    padding: 8px 12px;
-    font-size: 11px;
-  }
-}
     :root{
       --bg:#fdf7f3;
+      --bg-2:#f8eee9;
       --card:rgba(255,255,255,.96);
       --text:#241a17;
-      --muted:#806f68;
+      --muted:#7d6d66;
       --line:#ead9d1;
       --gold:#c79a6a;
       --gold-dark:#a97847;
@@ -232,7 +50,7 @@
       font-family:Arial, Helvetica, sans-serif;
       color:var(--text);
       background:
-        radial-gradient(circle at top, #fffdfb 0%, #fdf7f3 34%, #f8eee9 100%);
+        radial-gradient(circle at top, #fffdfb 0%, var(--bg) 34%, var(--bg-2) 100%);
     }
 
     a{
@@ -264,8 +82,7 @@
     .hero{
       overflow:hidden;
       position:relative;
-      background:
-        linear-gradient(180deg, rgba(255,255,255,.97), rgba(255,248,244,.97));
+      background:linear-gradient(180deg, rgba(255,255,255,.97), rgba(255,248,244,.97));
     }
 
     .hero::before{
@@ -324,6 +141,12 @@
       font-weight:800;
       box-shadow:0 14px 28px rgba(169,120,71,.28);
       white-space:nowrap;
+      transition:transform .2s ease, box-shadow .2s ease;
+    }
+
+    .top-book:hover{
+      transform:translateY(-2px);
+      box-shadow:0 18px 34px rgba(169,120,71,.34);
     }
 
     .subtitle{
@@ -335,93 +158,151 @@
       z-index:2;
     }
 
+    /* HERO SLIDER */
     .hero-image{
       position:relative;
       margin-top:18px;
-      border-radius:24px;
       overflow:hidden;
+      border-radius:28px;
+      min-height:520px;
+      background:#111;
       box-shadow:var(--shadow-lg);
     }
 
-    .hero-image img{
-      width:100%;
-      aspect-ratio:4/5;
-      object-fit:cover;
-      object-position:center top;
+    .hero-slider{
+      position:absolute;
+      inset:0;
+      z-index:1;
+      overflow:hidden;
     }
+
+    .hero-slider img{
+      position:absolute;
+      inset:0;
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      object-position:center center;
+      opacity:0;
+      transform:scale(1.03);
+      animation:heroSlide 15s infinite;
+      transition:opacity 1s ease-in-out, transform 6s ease-in-out;
+      will-change:opacity, transform;
+    }
+
+    .hero-slider img:nth-child(1){ animation-delay:0s; }
+    .hero-slider img:nth-child(2){ animation-delay:5s; }
+    .hero-slider img:nth-child(3){ animation-delay:10s; }
 
     .hero-overlay{
       position:absolute;
       inset:0;
-      background:linear-gradient(
-        to top,
-        rgba(20,14,12,.74) 0%,
-        rgba(20,14,12,.20) 42%,
-        rgba(20,14,12,.06) 68%,
-        rgba(20,14,12,.03) 100%
-      );
+      z-index:2;
+      pointer-events:none;
+      background:
+        linear-gradient(
+          to bottom,
+          rgba(0,0,0,.16) 0%,
+          rgba(0,0,0,.22) 24%,
+          rgba(0,0,0,.40) 58%,
+          rgba(0,0,0,.70) 82%,
+          rgba(0,0,0,.84) 100%
+        ),
+        radial-gradient(
+          120% 85% at 15% 18%,
+          rgba(0,0,0,.16),
+          transparent 60%
+        );
     }
 
     .hero-badge{
-      position:absolute;
-      top:16px;
-      left:16px;
+      position:relative;
       z-index:3;
-      background:rgba(255,248,242,.94);
-      color:#7b5841;
-      border:1px solid rgba(255,255,255,.75);
-      padding:10px 14px;
+      display:inline-block;
+      margin:18px 0 0 18px;
+      padding:10px 16px;
       border-radius:999px;
-      font-size:12px;
+      background:rgba(255,255,255,.96);
+      color:#4c342b;
+      border:1px solid rgba(255,255,255,.90);
       font-weight:800;
-      letter-spacing:.04em;
-      box-shadow:0 8px 20px rgba(0,0,0,.08);
+      font-size:13px;
+      letter-spacing:.03em;
+      box-shadow:0 10px 24px rgba(0,0,0,.12);
     }
 
     .hero-caption{
       position:absolute;
-      left:18px;
-      right:18px;
-      bottom:18px;
+      left:24px;
+      right:24px;
+      bottom:24px;
       z-index:3;
       color:#fff;
     }
 
     .hero-caption strong{
       display:block;
-      font-size:30px;
-      line-height:1.1;
-      margin-bottom:8px;
-      text-shadow:0 3px 10px rgba(0,0,0,.28);
+      font-size:clamp(28px, 4vw, 46px);
+      line-height:1.06;
+      letter-spacing:-0.02em;
+      margin-bottom:10px;
+      text-shadow:0 4px 18px rgba(0,0,0,.45);
     }
 
     .hero-caption p{
       margin:0;
-      font-size:14px;
-      line-height:1.55;
-      color:rgba(255,255,255,.93);
-      max-width:430px;
-      text-shadow:0 2px 8px rgba(0,0,0,.24);
+      max-width:720px;
+      font-size:16px;
+      line-height:1.6;
+      color:rgba(255,255,255,.96);
+      text-shadow:0 3px 14px rgba(0,0,0,.42);
     }
 
     .tag-row{
       display:flex;
       flex-wrap:wrap;
       gap:10px;
-      margin-top:16px;
+      margin-top:14px;
     }
 
     .tag{
-      padding:9px 14px;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:10px 15px;
       border-radius:999px;
+      background:rgba(255,255,255,.97);
+      color:#4a3128;
+      border:1px solid rgba(255,255,255,.92);
       font-size:12px;
-      font-weight:800;
-      letter-spacing:.04em;
+      font-weight:900;
+      letter-spacing:.06em;
       text-transform:uppercase;
-      color:#755547;
-      background:linear-gradient(180deg, #fffdfc, #f9eee8);
-      border:1px solid #ecd9cf;
-      box-shadow:0 8px 18px rgba(0,0,0,.05);
+      box-shadow:0 10px 20px rgba(0,0,0,.14);
+      text-shadow:none;
+    }
+
+    @keyframes heroSlide{
+      0%{
+        opacity:0;
+        transform:scale(1.03);
+      }
+      5%{
+        opacity:1;
+        transform:scale(1);
+      }
+      30%{
+        opacity:1;
+        transform:scale(1);
+      }
+      35%{
+        opacity:0;
+        transform:scale(1.02);
+      }
+      100%{
+        opacity:0;
+        transform:scale(1.03);
+      }
     }
 
     .quick-grid{
@@ -444,6 +325,12 @@
       color:#4d3730;
       padding:12px 14px;
       box-shadow:inset 0 1px 0 rgba(255,255,255,.85);
+      transition:transform .2s ease, box-shadow .2s ease;
+    }
+
+    .quick-btn:hover{
+      transform:translateY(-2px);
+      box-shadow:0 12px 22px rgba(0,0,0,.08);
     }
 
     .section-title{
@@ -514,6 +401,12 @@
       font-weight:800;
       margin-top:14px;
       padding:14px 16px;
+      transition:transform .2s ease, box-shadow .2s ease;
+    }
+
+    .dark-btn:hover{
+      transform:translateY(-2px);
+      box-shadow:0 18px 30px rgba(33,22,18,.22);
     }
 
     .feature-grid{
@@ -552,7 +445,7 @@
 
     .nav-grid{
       display:grid;
-      grid-template-columns:1fr 1fr 1fr;
+      grid-template-columns:1fr 1fr;
       gap:14px;
     }
 
@@ -660,16 +553,60 @@
       letter-spacing:.06em;
       font-weight:900;
       text-transform:uppercase;
+      transition:transform .2s ease, box-shadow .2s ease;
+    }
+
+    .sticky-book a:hover{
+      transform:translateY(-2px);
+      box-shadow:0 22px 38px rgba(169,120,71,.36);
     }
 
     @media (max-width:860px){
-      .feature-grid,
-      .nav-grid{
+      .feature-grid{
         grid-template-columns:1fr;
       }
 
       .quick-grid{
         grid-template-columns:1fr 1fr 1fr;
+      }
+    }
+
+    @media (max-width:640px){
+      .hero-image{
+        min-height:400px;
+        border-radius:22px;
+      }
+
+      .hero-badge{
+        margin:14px 0 0 14px;
+        padding:9px 14px;
+        font-size:12px;
+      }
+
+      .hero-caption{
+        left:16px;
+        right:16px;
+        bottom:16px;
+      }
+
+      .hero-caption strong{
+        font-size:30px;
+        margin-bottom:8px;
+      }
+
+      .hero-caption p{
+        font-size:14px;
+        line-height:1.5;
+      }
+
+      .tag-row{
+        gap:8px;
+        margin-top:12px;
+      }
+
+      .tag{
+        padding:9px 12px;
+        font-size:11px;
       }
     }
 
@@ -689,14 +626,6 @@
 
       h1{
         font-size:28px;
-      }
-
-      .hero-caption strong{
-        font-size:25px;
-      }
-
-      .hero-caption p{
-        font-size:13px;
       }
 
       .section-title{
@@ -722,51 +651,54 @@
           <h1>Luxury Nail Salon in Odessa</h1>
         </div>
 
-        <a class="top-book"
+        <a
+          class="top-book"
           href="https://www.lldtek.org/salon/appt/NDc1NjJ8YW5uaWU5ODB8VFhfMDc5ODB8ZmFiOTdiNzJlZDQ4Y2YzZjY2NTZlZDQ2ZjM2ZGVjYTQ="
-          target="_blank" rel="noopener noreferrer">
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           Book Appointment
         </a>
       </div>
 
       <div class="subtitle">
-        2613 N Grandview Ave<br>
+        2613 N Grandview Ave<br />
         Odessa, TX 79761
       </div>
 
       <div class="hero-image">
+        <div class="hero-slider">
+          <img src="images/manicure-odessa-tx.jpg" alt="Manicure service at Annie's Nails & Spa in Odessa TX" />
+          <img src="images/gel-nails-odessa-tx.jpg" alt="Gel nails at Annie's Nails & Spa in Odessa TX" />
+          <img src="images/acrylic-nails-odessa-tx.jpg" alt="Acrylic nails at Annie's Nails & Spa in Odessa TX" />
+        </div>
 
-  <div class="hero-slider">
-    <img src="images/manicure-odessa-tx.jpg">
-    <img src="images/gel-nails-odessa-tx.jpg">
-    <img src="images/acrylic-nails-odessa-tx.jpg">
-  </div>
+        <div class="hero-overlay"></div>
 
-  <div class="hero-overlay"></div>
+        <div class="hero-badge">Voted Best of the Permian Basin</div>
 
-  <div class="hero-badge">Voted Best of the Permian Basin</div>
+        <div class="hero-caption">
+          <strong>Beautiful nails. Friendly service.</strong>
+          <p>Welcome to Annie's Nails & Spa, where clients enjoy polished results.</p>
 
-  <div class="hero-caption">
-
-    <strong>Beautiful nails. Friendly service.</strong>
-
-    <div>
-      Welcome to Annie's Nails & Spa, where clients enjoy polished results.
-    </div>
-
-    <div class="tag-row">
-      <div class="tag">Award-Winning</div>
-      <div class="tag">Friendly Team</div>
-      <div class="tag">Odessa TX</div>
-    </div>
-
-  </div>
-
-</div>
+          <div class="tag-row">
+            <span class="tag">Award-Winning</span>
+            <span class="tag">Friendly Team</span>
+            <span class="tag">Odessa TX</span>
+          </div>
+        </div>
+      </div>
 
       <div class="quick-grid">
         <a class="quick-btn" href="tel:+14322999999">Call Salon</a>
-        <a class="quick-btn" href="https://www.google.com/maps/place/Annie's+Nails+%26+Spa/@31.8745932,-102.3481688,883m/data=!3m2!1e3!4b1!4m6!3m5!1s0x86fbc932c881c71b:0x7ff74000061e8571!8m2!3d31.8745932!4d-102.3481688!16s%2Fg%2F11b76h06nn?entry=ttu&g_ep=EgoyMDI2MDMxMS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer">Directions</a>
+        <a
+          class="quick-btn"
+          href="https://www.google.com/maps/place/Annie's+Nails+%26+Spa/@31.8745932,-102.3481688,883m/data=!3m2!1e3!4b1!4m6!3m5!1s0x86fbc932c881c71b:0x7ff74000061e8571!8m2!3d31.8745932!4d-102.3481688!16s%2Fg%2F11b76h06nn?entry=ttu&g_ep=EgoyMDI2MDMxMS4wIKXMDSoASAFQAw%3D%3D"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Directions
+        </a>
         <a class="quick-btn" href="review.html">Leave Review</a>
       </div>
     </div>
@@ -870,8 +802,7 @@
           <i class="fa-solid fa-pen"></i>
           <strong>Nail Blog</strong>
           <span>Beauty tips, nail care, and Odessa salon updates.</span>
-       </a>
-
+        </a>
       </div>
     </div>
 
@@ -880,19 +811,39 @@
       <p class="section-note">Stay connected for salon updates and nail inspiration.</p>
 
       <div class="social-icons">
-        <a href="https://www.facebook.com/nailodessa" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+        <a
+          href="https://www.facebook.com/nailodessa"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Facebook"
+        >
           <i class="fab fa-facebook-f"></i>
         </a>
 
-        <a href="https://www.instagram.com/anniesnailsodessa" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+        <a
+          href="https://www.instagram.com/anniesnailsodessa"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Instagram"
+        >
           <i class="fab fa-instagram"></i>
         </a>
 
-        <a href="https://www.tiktok.com/@anniesnailsodessa" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+        <a
+          href="https://www.tiktok.com/@anniesnailsodessa"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="TikTok"
+        >
           <i class="fab fa-tiktok"></i>
         </a>
 
-        <a href="https://www.yelp.com/biz/annies-nails-and-spa-odessa" target="_blank" rel="noopener noreferrer" aria-label="Yelp">
+        <a
+          href="https://www.yelp.com/biz/annies-nails-and-spa-odessa"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Yelp"
+        >
           <i class="fab fa-yelp"></i>
         </a>
       </div>
@@ -910,20 +861,23 @@
           style="border:0;display:block;filter:grayscale(.03) contrast(1.02);"
           allowfullscreen=""
           loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"></iframe>
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
       </div>
     </div>
 
     <div class="footer">
-      Annie's Nails &amp; Spa • Odessa, Texas<br>
+      Annie's Nails &amp; Spa • Odessa, Texas<br />
       Beautiful nails. Friendly service.
     </div>
-
   </div>
 
   <div class="sticky-book">
-    <a href="https://www.lldtek.org/salon/appt/NDc1NjJ8YW5uaWU5ODB8VFhfMDc5ODB8ZmFiOTdiNzJlZDQ4Y2YzZjY2NTZlZDQ2ZjM2ZGVjYTQ="
-       target="_blank" rel="noopener noreferrer">
+    <a
+      href="https://www.lldtek.org/salon/appt/NDc1NjJ8YW5uaWU5ODB8VFhfMDc5ODB8ZmFiOTdiNzJlZDQ4Y2YzZjY2NTZlZDQ2ZjM2ZGVjYTQ="
+      target="_blank"
+      rel="noopener noreferrer"
+    >
       Book Now
     </a>
   </div>
