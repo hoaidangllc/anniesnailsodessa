@@ -13,28 +13,30 @@
     .social-icons{
 display:flex;
 justify-content:center;
-gap:16px;
-margin-top:14px;
+align-items:center;
+gap:18px;
+margin-top:16px;
+flex-wrap:wrap;
 }
 
 .social-icons a{
-width:54px;
-height:54px;
+width:56px;
+height:56px;
 border-radius:50%;
 display:flex;
 align-items:center;
 justify-content:center;
-background:white;
+background:#ffffff;
 border:1px solid #eee;
 font-size:22px;
 color:#333;
-box-shadow:0 4px 12px rgba(0,0,0,0.08);
-transition:0.2s;
+box-shadow:0 6px 16px rgba(0,0,0,0.08);
+transition:all 0.25s ease;
 }
 
 .social-icons a:hover{
-transform:translateY(-3px);
-box-shadow:0 8px 20px rgba(0,0,0,0.15);
+transform:translateY(-5px) scale(1.08);
+box-shadow:0 12px 28px rgba(0,0,0,0.18);
 }
 .fa-facebook-f {color:#1877f2;}
 .fa-instagram {color:#e1306c;}
