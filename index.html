@@ -53,28 +53,33 @@ content="Annie's Nails & Spa is a top rated nail salon in Odessa TX offering man
   />
 
   <style>
-    .floating-contact{
+   .floating-contact{
 position:fixed;
-right:15px;
-bottom:110px;
+right:18px;
+bottom:200px;
 display:flex;
 flex-direction:column;
-gap:8px;
+gap:10px;
 z-index:9999;
 }
 
 .call-btn,
 .dir-btn{
-background:#c88b76;
+width:50px;
+height:50px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:24px;
 color:white;
-padding:8px 12px;
-border-radius:20px;
 text-decoration:none;
-font-size:13px;
-font-weight:600;
-box-shadow:0 3px 8px rgba(0,0,0,0.15);
+box-shadow:0 4px 10px rgba(0,0,0,0.2);
 }
 
+.call-btn{
+background:#c88b76;
+}
 .dir-btn{
 background:#4285F4;
 }
@@ -957,14 +962,10 @@ font-weight:bold;
   
 <div class="floating-contact">
 
-<a href="tel:+14322999999" class="call-btn">
-📞 Call
-</a>
+<a href="tel:+14322999999" class="call-btn">📞</a>
 
 <a href="https://www.google.com/maps/dir/?api=1&destination=2613+N+Grandview+Ave+Odessa+TX"
-target="_blank" class="dir-btn">
-📍 Directions
-</a>
+target="_blank" class="dir-btn">📍</a>
 
 </div>
   <footer style="text-align:center;padding:35px 20px;color:#777;font-size:14px;border-top:1px solid #eee">
