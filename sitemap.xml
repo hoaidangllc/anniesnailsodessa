@@ -3,11 +3,19 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
-<loc>https://annienailsodessa.com/</loc>
+  <loc>https://annienailsodessa.com/</loc>
 </url>
-
 <url>
-<loc>https://annienailsodessa.com/blog.html</loc>
+  <loc>https://annienailsodessa.com/menu.html</loc>
+</url>
+<url>
+  <loc>https://annienailsodessa.com/photo.html</loc>
+</url>
+<url>
+  <loc>https://annienailsodessa.com/review.html</loc>
+</url>
+<url>
+  <loc>https://annienailsodessa.com/blog.html</loc>
 </url>
 
 <url>
