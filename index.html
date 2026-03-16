@@ -186,7 +186,7 @@
       --shadow:0 14px 35px rgba(39,25,20,.08);
       --shadow-lg:0 24px 55px rgba(39,25,20,.14);
       --radius:26px;
-      --max:760px;
+      --max:860px;
     }
 
     *{
@@ -483,6 +483,158 @@
       line-height:1.6;
     }
 
+    .stats-grid{
+      display:grid;
+      grid-template-columns:repeat(3, 1fr);
+      gap:14px;
+      margin-top:6px;
+    }
+
+    .stat-card{
+      border-radius:22px;
+      padding:18px 16px;
+      background:linear-gradient(180deg, #fffefc, #faf1eb);
+      border:1px solid #eddcd3;
+      box-shadow:0 10px 22px rgba(0,0,0,.05);
+      text-align:center;
+    }
+
+    .stat-number{
+      display:block;
+      font-size:28px;
+      font-weight:900;
+      color:#2c211d;
+      margin-bottom:6px;
+      letter-spacing:-0.02em;
+    }
+
+    .stat-label{
+      display:block;
+      font-size:13px;
+      line-height:1.5;
+      color:var(--muted);
+      font-weight:700;
+    }
+
+    .rewards-wrap{
+      display:grid;
+      grid-template-columns:1.15fr .85fr;
+      gap:16px;
+      align-items:stretch;
+    }
+
+    .rewards-main,
+    .rewards-side{
+      border-radius:24px;
+      border:1px solid #eddcd3;
+      box-shadow:0 10px 22px rgba(0,0,0,.05);
+    }
+
+    .rewards-main{
+      padding:24px;
+      background:linear-gradient(135deg, #fff8f3, #fdeee6);
+    }
+
+    .rewards-eyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      margin-bottom:10px;
+      padding:8px 12px;
+      border-radius:999px;
+      background:rgba(255,255,255,.75);
+      border:1px solid #f0ddd2;
+      font-size:12px;
+      font-weight:900;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      color:#9a6a4d;
+    }
+
+    .rewards-title{
+      margin:0 0 10px;
+      font-size:28px;
+      line-height:1.12;
+      color:#2c211d;
+      letter-spacing:-0.02em;
+    }
+
+    .rewards-text{
+      margin:0;
+      font-size:15px;
+      line-height:1.7;
+      color:#6f5f58;
+      max-width:560px;
+    }
+
+    .rewards-points{
+      margin-top:18px;
+      display:grid;
+      grid-template-columns:repeat(3, 1fr);
+      gap:12px;
+    }
+
+    .reward-pill{
+      border-radius:18px;
+      padding:14px 12px;
+      background:rgba(255,255,255,.88);
+      border:1px solid #f0ddd2;
+      text-align:center;
+      font-size:13px;
+      font-weight:800;
+      color:#4c342b;
+      line-height:1.45;
+    }
+
+    .rewards-side{
+      padding:22px;
+      background:linear-gradient(180deg, #fffefc, #faf1eb);
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+    }
+
+    .rewards-side .mini-kicker{
+      display:block;
+      font-size:12px;
+      font-weight:900;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      color:#9a6a4d;
+      margin-bottom:10px;
+    }
+
+    .rewards-side strong{
+      display:block;
+      font-size:20px;
+      line-height:1.2;
+      color:#2c211d;
+      margin-bottom:10px;
+    }
+
+    .rewards-side span{
+      display:block;
+      font-size:14px;
+      line-height:1.65;
+      color:var(--muted);
+      margin-bottom:16px;
+    }
+
+    .mini-btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-height:48px;
+      border-radius:16px;
+      padding:12px 16px;
+      background:linear-gradient(135deg, var(--gold), var(--gold-dark));
+      color:#fff;
+      font-size:14px;
+      font-weight:800;
+      box-shadow:0 14px 28px rgba(169,120,71,.22);
+      width:100%;
+    }
+
     .menu-box{
       border-radius:24px;
       overflow:hidden;
@@ -706,11 +858,17 @@
     }
 
     @media (max-width:860px){
-      .feature-grid{
+      .feature-grid,
+      .stats-grid,
+      .rewards-wrap{
         grid-template-columns:1fr;
       }
 
       .quick-grid{
+        grid-template-columns:1fr 1fr 1fr;
+      }
+
+      .rewards-points{
         grid-template-columns:1fr 1fr 1fr;
       }
     }
@@ -752,6 +910,10 @@
         padding:9px 12px;
         font-size:11px;
       }
+
+      .rewards-title{
+        font-size:24px;
+      }
     }
 
     @media (max-width:520px){
@@ -778,7 +940,9 @@
 
       .quick-grid,
       .nav-grid,
-      .feature-grid{
+      .feature-grid,
+      .stats-grid,
+      .rewards-points{
         grid-template-columns:1fr;
       }
     }
@@ -842,6 +1006,56 @@
           Directions
         </a>
         <a class="quick-btn" href="review.html">Leave Review</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2 class="section-title">Trusted by Odessa Clients</h2>
+      <p class="section-note">A local salon experience backed by strong reviews, repeat visits, and a loyal community.</p>
+
+      <div class="stats-grid">
+        <div class="stat-card">
+          <span class="stat-number">800+</span>
+          <span class="stat-label">Google Reviews</span>
+        </div>
+
+        <div class="stat-card">
+          <span class="stat-number">Top Rated</span>
+          <span class="stat-label">Trusted by Odessa Clients</span>
+        </div>
+
+        <div class="stat-card">
+          <span class="stat-number">Easy</span>
+          <span class="stat-label">Online Booking &amp; Fast Check-In</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2 class="section-title">Exclusive Client Rewards</h2>
+      <p class="section-note">A more rewarding salon experience designed for loyal guests at Annie's Nails &amp; Spa.</p>
+
+      <div class="rewards-wrap">
+        <div class="rewards-main">
+          <span class="rewards-eyebrow"><i class="fa-solid fa-gift"></i> Rewards Program</span>
+          <h3 class="rewards-title">Earn points and enjoy extra perks with every visit.</h3>
+          <p class="rewards-text">
+            Annie's Nails &amp; Spa offers an in-store rewards experience for valued clients. Check in during your visit and enjoy exclusive client perks designed to make every appointment even better.
+          </p>
+
+          <div class="rewards-points">
+            <div class="reward-pill">Easy in-store check-in</div>
+            <div class="reward-pill">Points with every visit</div>
+            <div class="reward-pill">Perks for loyal guests</div>
+          </div>
+        </div>
+
+        <div class="rewards-side">
+          <span class="mini-kicker">Designed for repeat clients</span>
+          <strong>Modern salon experience with built-in rewards.</strong>
+          <span>Ask about our in-store rewards program during your next visit and enjoy more reasons to come back.</span>
+          <a class="mini-btn" href="review.html">Explore Reviews</a>
+        </div>
       </div>
     </div>
 
