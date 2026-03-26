@@ -59,10 +59,19 @@ overflow:hidden;
 
 .hero{
 height:300px;
-background:
-linear-gradient(180deg, rgba(0,0,0,.10), rgba(0,0,0,.04)),
-url('../images/nail-salon-odessa-tx-1.jpg') center/contain no-repeat;
-background-color:#f8eee9;
+display:flex;
+align-items:center;
+justify-content:center;
+background-color:#f3e9e4;
+border-radius:20px 20px 0 0;
+overflow:hidden;
+}
+
+.hero img{
+height:100%;
+width:auto;
+object-fit:contain;
+border-radius:12px;
 }
 
 .content{
@@ -145,7 +154,9 @@ text-decoration:none;
 
 <article>
 
-<div class="hero"></div>
+<div class="hero">
+  <img src="../images/nail-salon-odessa-tx-1.jpg" alt="Nail salon Odessa TX">
+</div>
 
 <div class="content">
 
