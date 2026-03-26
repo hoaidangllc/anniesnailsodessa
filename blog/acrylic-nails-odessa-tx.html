@@ -58,12 +58,23 @@ overflow:hidden;
 }
 
 .hero{
-height:300px;
-background:
-linear-gradient(180deg, rgba(0,0,0,.18), rgba(0,0,0,.06)),
-url('https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=1400&q=80') center/cover no-repeat;
+height:260px;
+display:flex;
+align-items:center;
+justify-content:center;
+background-color:#f3e9e4;
+border-radius:20px 20px 0 0;
+overflow:hidden;
 }
 
+.hero img{
+width:100%;
+height:100%;
+object-fit:cover;
+object-position:center 55%;
+border-radius:0;
+}
+  
 .content{
 padding:30px 24px;
 }
@@ -125,7 +136,9 @@ text-decoration:none;
 
 <article>
 
-<div class="hero"></div>
+<div class="hero">
+  <img src="../images/nail-salon-odessa-tx-2.jpg" alt="Acrylic nails in Odessa TX at Annie's Nails & Spa">
+</div>
 
 <div class="content">
 
@@ -167,6 +180,11 @@ Whether you want a natural look or bold nail art, our technicians can help creat
 <p>
 If you are searching for acrylic nails in Odessa TX, Annie's Nails & Spa is ready to welcome you. Our salon provides a relaxing environment where you can enjoy professional nail services.
 </p>
+  
+  <div class="cta-box">
+<p><strong>Check our prices before you visit:</strong></p>
+<a href="../menu.html">View Nail Salon Menu in Odessa TX</a>
+</div>
 
 <div class="note">
 
