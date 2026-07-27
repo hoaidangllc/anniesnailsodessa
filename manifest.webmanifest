@@ -1,0 +1,21 @@
+{
+  "name": "Annie's Nails & Spa",
+  "short_name": "Annie's Nails & Spa",
+  "start_url": "https://annienailsodessa.com/",
+  "scope": "https://annienailsodessa.com/",
+  "display": "standalone",
+  "background_color": "#241a17",
+  "theme_color": "#241a17",
+  "icons": [
+    {
+      "src": "https://annienailsodessa.com/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "https://annienailsodessa.com/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
