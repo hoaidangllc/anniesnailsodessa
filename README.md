@@ -1,3 +1,7 @@
-# Annie's Nails & Spa website
+# Annie's Nails & Spa
 
-Production static website for annienailsodessa.com. Preserve existing public URLs because they are indexed by search engines.
+Official production website for Annie's Nails & Spa in Odessa, Texas.
+
+Website: https://annienailsodessa.com/
+
+Important: preserve existing public URLs because they are indexed by search engines.
