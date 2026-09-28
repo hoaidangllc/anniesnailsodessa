@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Text Offers | Annie's Nails & Spa</title>
+<meta name="description" content="Sign up for occasional text offers and salon updates from Annie's Nails & Spa in Odessa, Texas.">
+<meta name="robots" content="index,follow">
+<meta name="theme-color" content="#241a17">
+<link rel="canonical" href="https://annienailsodessa.com/text-offers.html">
+<link rel="icon" type="image/png" href="/favicon.png">
+<style>
+:root{--cream:#fdf8f4;--paper:#fffdfa;--ink:#291f1b;--muted:#74655f;--line:#eadbd3;--gold:#c59668;--gold2:#a87549;--shadow:0 18px 55px rgba(49,31,24,.08)}*{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:radial-gradient(circle at 50% -10%,#fff 0,#fdf8f4 40%,#f6ece6 100%);line-height:1.55}.shell{width:min(calc(100% - 32px),760px);margin:auto;padding:32px 0 60px}.card{background:rgba(255,253,250,.96);border:1px solid var(--line);border-radius:28px;box-shadow:var(--shadow);padding:34px}.eyebrow{font-size:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:#966d52}.brand{font-weight:900;font-size:18px;margin:7px 0 28px}.brand a{text-decoration:none;color:inherit}h1{font-size:clamp(32px,6vw,48px);line-height:1.05;letter-spacing:-.035em;margin:0 0 12px}.lead{color:var(--muted);font-size:17px;margin:0 0 28px}.field label{display:block;font-weight:800;margin-bottom:8px}.field input[type=tel]{width:100%;height:56px;border:1px solid #d9c6bc;border-radius:16px;background:#fff;padding:0 16px;font-size:18px;color:var(--ink);outline:none}.field input[type=tel]:focus{border-color:#a87549;box-shadow:0 0 0 3px rgba(168,117,73,.12)}.consent{display:grid;grid-template-columns:22px 1fr;gap:11px;align-items:start;margin:20px 0 8px}.consent input{width:19px;height:19px;margin-top:3px}.consent label{font-size:14px;color:#594a44}.consent a,.fine a{color:#80583f;text-decoration:underline;text-underline-offset:2px}.submit{width:100%;min-height:56px;border:0;border-radius:17px;background:linear-gradient(135deg,var(--gold),var(--gold2));color:#fff;font-weight:900;font-size:16px;cursor:pointer;margin-top:14px}.submit:disabled{opacity:.6;cursor:wait}.fine{font-size:12px;color:var(--muted);margin:15px 0 0}.status{display:none;margin-top:18px;padding:14px 16px;border-radius:14px;font-weight:700}.status.ok{display:block;background:#edf7ef;color:#285d35;border:1px solid #cfe6d3}.status.err{display:block;background:#fff0ee;color:#8a332b;border:1px solid #efd1cc}.back{display:inline-block;margin-top:22px;color:#80583f;font-weight:800;text-decoration:none}.hp{position:absolute!important;left:-9999px!important;width:1px!important;height:1px!important;overflow:hidden!important}@media(max-width:560px){.shell{width:calc(100% - 24px);padding-top:14px}.card{padding:22px;border-radius:24px}h1{font-size:32px}.lead{font-size:15px}}
+</style>
+</head>
+<body>
+<main class="shell">
+<section class="card">
+<div class="eyebrow">Annie's Nails & Spa</div>
+<div class="brand"><a href="/">Odessa, Texas</a></div>
+<h1>Get Annie's specials by text.</h1>
+<p class="lead">Sign up for occasional salon offers, promotions and friendly reminders to come see us again.</p>
+<form id="sms-form" novalidate>
+<div class="field"><label for="phone">Mobile number</label><input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="(432) 555-1234" required></div>
+<div class="hp" aria-hidden="true"><label for="website">Website</label><input id="website" name="website" type="text" tabindex="-1" autocomplete="off"></div>
+<div class="consent"><input id="sms-consent" name="sms-consent" type="checkbox" required><label for="sms-consent">I agree to receive occasional promotional and re-engagement text messages from Annie's Nails & Spa. Message frequency varies. Message and data rates may apply. Reply STOP to opt out or HELP for help. Consent is not a condition of purchase. By signing up, I agree to the <a href="/terms.html" target="_blank" rel="noopener">Terms &amp; Conditions</a> and <a href="/privacy.html" target="_blank" rel="noopener">Privacy Policy</a>.</label></div>
+<button class="submit" id="submit" type="submit">Sign Up for Text Offers</button>
+<p class="fine">Your mobile number and SMS opt-in consent will not be sold, rented, or shared with third parties or affiliates for their marketing or promotional purposes.</p>
+<div id="status" class="status" role="status" aria-live="polite"></div>
+</form>
+<a class="back" href="/">← Back to Annie's Nails & Spa</a>
+</section>
+</main>
+<script>
+const FORM=document.getElementById('sms-form');
+const BTN=document.getElementById('submit');
+const STATUS=document.getElementById('status');
+const CONSENT_TEXT="I agree to receive occasional promotional and re-engagement text messages from Annie's Nails & Spa. Message frequency varies. Message and data rates may apply. Reply STOP to opt out or HELP for help. Consent is not a condition of purchase.";
+const ENDPOINT='https://bikdirptdltugfmzcmvg.supabase.co/rest/v1/annie_sms_consents';
+const KEY='sb_publishable_yNLLHX5YAw9ksrp7ZXxQjQ_kIdrqWQ8';
+function normalizeUSPhone(value){const d=value.replace(/\D/g,'');const n=d.length===11&&d[0]==='1'?d.slice(1):d;return /^[2-9]\d{9}$/.test(n)?'+1'+n:null}
+FORM.addEventListener('submit',async(e)=>{e.preventDefault();STATUS.className='status';STATUS.textContent='';if(document.getElementById('website').value)return;const phone=normalizeUSPhone(document.getElementById('phone').value);if(!phone){STATUS.textContent='Please enter a valid U.S. mobile number.';STATUS.className='status err';return}if(!document.getElementById('sms-consent').checked){STATUS.textContent='Please check the consent box to sign up.';STATUS.className='status err';return}BTN.disabled=true;BTN.textContent='Signing Up…';try{const r=await fetch(ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json','apikey':KEY,'Prefer':'return=minimal'},body:JSON.stringify({phone,status:'opted_in',source:'annienailsodessa.com',consent_version:'2026-09-27-v1',consent_text:CONSENT_TEXT})});if(!r.ok)throw new Error('submit failed');FORM.reset();STATUS.textContent="You're signed up for Annie's text offers. Thank you!";STATUS.className='status ok'}catch(err){STATUS.textContent='We could not complete your sign-up right now. Please try again.';STATUS.className='status err'}finally{BTN.disabled=false;BTN.textContent='Sign Up for Text Offers'}});
+</script>
+</body>
+</html>
